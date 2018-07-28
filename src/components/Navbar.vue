@@ -11,17 +11,25 @@
         <p id="name">Hitesh Gohil</p>
       </li>
 
-      <li class="link" @click="selectHome()">
-        <span>Home</span>
+      <hr>
+
+      <li @click="selectHome()">
+        <span :class="[{active: homeStatus}]">Home</span>
       </li>
 
-      <li class="link" @click="selectAbout()">
-        <span>About</span>
+      <hr>
+
+      <li @click="selectAbout()">
+        <span :class="[{active: aboutStatus}]">About</span>
       </li>
 
-      <li class="link" @click="selectContact()">
-        <span>Contact</span>
+      <hr>
+
+      <li @click="selectContact()">
+        <span :class="[{active: contactStatus}]">Contact</span>
       </li>
+
+      <hr>
       
     </ul>
 
@@ -35,11 +43,25 @@ export default {
   props: {
     selectHome: Function,
     selectAbout: Function,
-    selectContact: Function
+    selectContact: Function,
+    homeStatus: Boolean,
+    aboutStatus: Boolean,
+    contactStatus: Boolean
   },
+
   data: function() {
     return{
 
+    }
+  },
+
+  methods: {
+    homeActive(){
+      if(homeStatus){
+        return{
+          color: 'red'
+        }
+      }
     }
   }
   
@@ -69,6 +91,10 @@ export default {
       color: rgb(0, 195, 255);
     }
 
+    .link{
+      color: red
+    }
+
     img{
       width: 90px;
       height: 90px;
@@ -86,6 +112,16 @@ export default {
       color: rgb(100, 100, 100);
       font-family: 'Ubuntu', sans-serif;
       font-weight: 500;
+    }
+
+    .active{
+      box-sizing: border-box;
+      transition: 1s ease-in-out;
+      transition-timing-function: ease-in;
+      color:rgb(0, 162, 255);
+      border-right: 1.5px solid rgb(124, 188, 207);
+      padding: 0px 5px;
+      cursor: pointer;
     }
    
 </style>

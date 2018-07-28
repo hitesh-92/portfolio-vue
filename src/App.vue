@@ -5,6 +5,9 @@
       :selectHome="switchToHome"
       :selectAbout="switchToAbout"
       :selectContact="switchToContact"
+      :homeStatus="appHome"
+      :aboutStatus="appAbout"
+      :contactStatus="appContact"
 
     />
 
