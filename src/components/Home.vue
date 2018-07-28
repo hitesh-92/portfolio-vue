@@ -2,8 +2,9 @@
     <div id="home">
       <h1 id="home-title">Web developer</h1>
 
-     
-      <p>{{ intro }}</p>
+      <p id="home-text">
+        Hello, my name is <strong>Hitesh</strong>. I am a web developer
+      </p>
 
     </div>
 </template>
@@ -19,7 +20,7 @@ export default {
   name: 'Home',
   data(){
     return{
-      intro: 'text'
+      
     }
   },
 
@@ -29,6 +30,10 @@ export default {
 <style scoped>
 
   #home-title{
+    text-align: center;
+  }
+
+  #home-text{
     text-align: center;
   }
 

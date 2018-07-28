@@ -70,6 +70,7 @@ export default {
   body{
     padding: 0;
     margin: 0;
+    font-family: 'Ubuntu', sans-serif;
   }
 
   #app{
@@ -102,6 +103,10 @@ export default {
 
   #app-about{
     border: 2px solid green;
+  }
+
+  .link{
+    color: red !important;
   }
 
 </style>

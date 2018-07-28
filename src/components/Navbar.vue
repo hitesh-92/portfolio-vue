@@ -11,15 +11,15 @@
         <p id="name">Hitesh Gohil</p>
       </li>
 
-      <li @click="selectHome()">
+      <li class="link" @click="selectHome()">
         <span>Home</span>
       </li>
 
-      <li @click="selectAbout()">
+      <li class="link" @click="selectAbout()">
         <span>About</span>
       </li>
 
-      <li @click="selectContact()">
+      <li class="link" @click="selectContact()">
         <span>Contact</span>
       </li>
       
@@ -83,7 +83,9 @@ export default {
     #name{
       font-size: 1.2em;
       text-shadow: 0.5px 0.5px 3px rgb(93, 115, 121);
-      color: rgb(100, 100, 100)
+      color: rgb(100, 100, 100);
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 500;
     }
    
 </style>
