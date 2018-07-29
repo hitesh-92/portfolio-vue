@@ -2,7 +2,7 @@
     <div id="about">
         
         <div id="about-container">
-            <h1>About</h1>
+            <h1>A little about me</h1>
 
             <div id="about-main">
 
@@ -24,6 +24,7 @@
                 <div id="main-right">
                     <p>I’m a self-taught developer who started to learn programming around 2 years ago as a hobby and a little while later found out about the world of web development. </p>
                     <p>Eventually coming to understanding that each programming language serve different purpose I decided to focus on what was needed to become a web developer.</p>
+
                 </div>
 
             </div>
@@ -41,13 +42,18 @@
 </script>
 
 <style scoped>
-
+    
     #about-container{
         height: 70vh;
         margin: 2em 1em;
         padding: 1em 3em;
-        border: 1px solid red;
-        text-align: center
+        text-align: center;
+        border-radius: 1px;
+        box-shadow: 0px 1px 15px 0px rgb(255, 255, 255);
+        background-color: white;
+        color: rgb(134, 143, 141);
+
+        /* border: 1px solid red; */
     }
 
     #about-container > h1{
@@ -57,6 +63,7 @@
     #about-main{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-top: 5em;
     }
 
     #main-left{

@@ -3,14 +3,12 @@
 
       <div id="home-container">
 
-        <h1 id="home-title">Web developer</h1>
+        <!-- <h1 id="home-title">Web developer</h1> -->
 
-        <p id="home-text">
-          Hello, my name is <strong>Hitesh</strong>.
-        </p>
-        <p>
-          
-        </p>
+        <div id="home-text">
+          <p>Hello, my name is <strong>Hitesh</strong></p>
+          <p>Feel free to browse around and get it touch if you want to me ask me anything</p>
+        </div>
 
       </div>
 
@@ -37,34 +35,31 @@ export default {
 
 <style >
 
-  /* #home-container{
+  #home-container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8,1fr);
     margin: 1em;
     height: 80vh;
-    background-color: white;
-    grid-template-areas: 
-      ". home-title home-title ."
-      ". . . ."
-      ". home-text home-text ."
-      ". home-text home-text .";
-  } */
-
-  #home-title{
-    /* grid-area: "home-title"; */
-
-    text-align: center;
-    margin: 1.5em 0em;
-    padding: 1.5em 1em;
+    /* background-color: white; */
+    /* grid-template-areas: 
+      ". . text . ."; */
+    text-shadow: 0.75px 0.75px 0.75px white;
+    color: rgb(134, 143, 141);
+  }
+  
+  p > strong {
+    color: rgb(109, 109, 109)
   }
 
   #home-text{
-    /* grid-area: "home-text"; */
+    /* grid-area: "text"; */
+    grid-column: 2/5;
+    grid-row: 3/5;
 
     text-align: center;
-    margin: 1em 0em;
-    padding: 1em 1em;
+
+    /* border: 1px solid black; */
   }
 
 </style>

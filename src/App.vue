@@ -36,19 +36,21 @@ export default {
   },
   methods: {
     switchToHome(){
-      this.appHome = true;
-      this.appAbout = false;
-      this.appContact = false;       
+      this.hideAll();
+      this.appHome = true;     
     },
     switchToAbout(){
-      this.appHome = false;
+      this.hideAll();
       this.appAbout = true;
-      this.appContact = false;      
     },
     switchToContact(){
+      this.hideAll();
+      this.appContact = true;
+    },
+    hideAll(){
       this.appHome = false;
       this.appAbout = false;
-      this.appContact = true;
+      this.appContact = false;
     }
   },
   components: {
@@ -97,8 +99,8 @@ export default {
     border: 2px solid purple;
   } */
 
-  #app-about{
+  /* #app-about{
     border: 2px solid green;
-  }
+  } */
 
 </style>
