@@ -35,13 +35,12 @@
 </script>
 
 <style scoped>
+
     #contact-container{
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(8, 1fr);
         height: 80vh;
-        /* margin-top: 5em; */
-        /* border: 1px solid red; */
     }
 
     #contact-form{
