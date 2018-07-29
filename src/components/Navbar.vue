@@ -3,9 +3,9 @@
 
     <ul class="nav-list">
 
-      <li id="nav-pic">
+      <!-- <li id="nav-pic">
         <img src="https://images.pexels.com/photos/1081235/pexels-photo-1081235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
-      </li>
+      </li> -->
 
       <li>
         <p id="name">Hitesh Gohil</p>
@@ -47,24 +47,7 @@ export default {
     homeStatus: Boolean,
     aboutStatus: Boolean,
     contactStatus: Boolean
-  },
-
-  data: function() {
-    return{
-
-    }
-  },
-
-  methods: {
-    homeActive(){
-      if(homeStatus){
-        return{
-          color: 'red'
-        }
-      }
-    }
   }
-  
 }
 </script>
 
@@ -91,10 +74,6 @@ export default {
       color: rgb(0, 195, 255);
     }
 
-    .link{
-      color: red
-    }
-
     img{
       width: 90px;
       height: 90px;
@@ -112,6 +91,7 @@ export default {
       color: rgb(100, 100, 100);
       font-family: 'Ubuntu', sans-serif;
       font-weight: 500;
+      padding-bottom: 3em;
     }
 
     .active{
@@ -120,8 +100,8 @@ export default {
       transition-timing-function: ease-in;
       color:rgb(0, 162, 255);
       border-right: 1.5px solid rgb(124, 188, 207);
-      padding: 0px 5px;
-      cursor: pointer;
+      padding: 0.05em 0.4em;
+      border-radius: 5px;
     }
    
 </style>
