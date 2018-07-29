@@ -8,7 +8,6 @@
       :homeStatus="appHome"
       :aboutStatus="appAbout"
       :contactStatus="appContact"
-
     />
 
     <div id="app-body">
@@ -19,7 +18,6 @@
     
   </div>
 </template>
-
 
 <script>
 import Navbar from './components/Navbar';
