@@ -44,7 +44,7 @@ export default {
     /* background-color: white; */
     /* grid-template-areas: 
       ". . text . ."; */
-    text-shadow: 0.75px 0.75px 0.75px white;
+    text-shadow: 0.75px 0.75px 0.75px rgb(255, 255, 255);
     color: rgb(134, 143, 141);
   }
   

@@ -2,11 +2,11 @@
     <div id="about">
         
         <div id="about-container">
-            <!-- <h1>A little about me</h1> -->
 
             <div id="about-main">
 
                 <div id="main-left">
+
                     <ul>
                         <li>JavaScript</li>
                         <li>HTML5 / CSS3</li>
@@ -19,9 +19,11 @@
                         <li>Git</li>
                         <li>some Python</li>
                     </ul>
+
                 </div>
 
                 <div id="main-right">
+
                     <p>I’m a self-taught developer who started to learn programming around 2 years ago as a hobby and a little while later found out about the world of web development. </p>
                     <p>Eventually coming to understanding that each programming language serves a different purpose I decided to focus on what was needed to become a web developer.</p>
 
