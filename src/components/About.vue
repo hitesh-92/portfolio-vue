@@ -51,7 +51,7 @@
         padding: 1em 3em;
         text-align: center;
         border-radius: 1px;
-        box-shadow: 0px 1px 15px 0px rgb(255, 255, 255);
+        box-shadow: 0px 1px 15px 0px rgb(165, 165, 165);
         background-color: white;
         color: rgb(134, 143, 141);
 
