@@ -17,7 +17,7 @@
                         <li>SQL: <small>MySQL</small></li>
                         <li>NoSQL: <small>MongoDB</small></li>
                         <li>Git</li>
-                        <li>some Python</li>
+                        <li><small>some Python</small></li>
                     </ul>
 
                 </div>
@@ -26,6 +26,7 @@
 
                     <p>I’m a self-taught developer who started to learn programming around 2 years ago as a hobby and a little while later found out about the world of web development. </p>
                     <p>Eventually coming to understanding that each programming language serves a different purpose I decided to focus on what was needed to become a web developer.</p>
+                    <p>Now I am focused on making web applications using JavaScript for front-end and back-end, though somewhat starting to lean towards PHP on the back-end.</p>
 
                 </div>
 
