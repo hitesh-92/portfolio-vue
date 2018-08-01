@@ -57,7 +57,12 @@
 
             </form>
 
-            <div v-else>THANKS FOR THE MSG</div>
+            <div id="contact-message" v-else>
+                <i>
+                <p>Thanks for getting in contact</p>
+                <p>I'll get get back to you ass soon as possible!</p>
+                </i>
+            </div>
 
         </div>
 
@@ -204,17 +209,27 @@
     #contact-heading{
         grid-column: 3/7;
         grid-row: 2/3;
-        /* border: 1px solid red; */
         font-size: 1.2em;
         margin: 0;
         padding: 0;
         text-align: center;
+        color: rgb(134, 143, 141);
     }
 
-    /* #contact-heading > h3 {
+    #contact-heading > h3 {
+        color: rgb(109, 109, 109);
+    }
+
+    #contact-message{
+        grid-column: 2/8;
+        grid-row: 4/9;
         text-align: center;
-        font-weight: 500;
-    } */
+        color: rgb(97, 97, 97);
+        font-size: 1.3em;
+
+
+        border: 1px solid black; 
+    }
 
 
 
