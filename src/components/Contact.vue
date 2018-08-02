@@ -93,51 +93,54 @@
                     id.placeholder = 'Please enter your name';
                     id.style.borderBottomColor = 'red';
                     id.focus();
+                } else {
+                    validName = true;
                 }
-
-                validName = true;
 
                 if(this.userData.email.length < 5){
                     document.getElementById('form-email-label').style.color = 'red';
                     const id = document.getElementById('form-email-input');
                     id.placeholder = 'Please enter your email';
                     id.style.borderBottomColor = 'red';
+
                     if (validName){
                         id.focus();
                     }
+                    
                 } else if (this.userData.email.length >= 5) {
                     //REGEX for email
-                }
 
-                validEmail = true;
+                    //exec this if the regex passes
+                    validEmail = true;
+                } 
 
-                if(this.userData.message.length < 1){
+                if(this.userData.message.length < 5){
                     const id = document.getElementById('form-message');
-                    id.placeholder = 'Looks like you forgot to add your message!'
-                    return
+                    id.placeholder = 'Looks like you forgot to add your message!';
+
+                    if(validEmail){
+                        id.focus();
+                    }
+                    
+                } else {
+                    validMessage = true;
                 }
 
-                validMessage = true;
+                console.log(validName, validEmail, validMessage);
 
-                if (validName && validEmail && validMessage){
+                if (validName==true && validEmail==true && validMessage==true){
                     let form = {};
                     form.name = this.userData.name;
                     form.email = this.userData.email;
                     form.message = this.userData.message;
-
-                    
-
                     this.isSubmitted = true;
                 }
-                
-                document.getElementById('contact-form');
 
-
-                
-               
             }
+
         }
     }
+
 </script>
 
 <style scoped>
