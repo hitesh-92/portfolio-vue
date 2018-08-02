@@ -14,7 +14,14 @@
 
         <div id="home-contact-btn">
           <a href="mailto:hiteshgohil@hotmail.co.uk">send me an email</a>
-          </div>
+        </div>
+
+        <div id="my-links">
+          <p>You can find me at:
+            <span><a href="https://github.com/hitesh-92">Github</a></span>
+            <span><a href="https://stackoverflow.com/users/8349248/hitesh">StackOverFlow</a></span>
+          </p>
+        </div>
 
       </div>
 
@@ -86,6 +93,17 @@ export default {
     transition: 0.2s ease-in-out;
     box-shadow: 2px 2px 2px 1px rgba(151, 151, 255, 0.2);
     color: rgb(231, 246, 253);
+  }
+
+  #my-links{
+    grid-column: 1/5;
+    grid-row: 8/9;
+  }
+
+  #my-links > p > span > a{
+    padding-left: 5px;
+    text-decoration-line: none;
+    color: rgb(89, 135, 204)
   }
 
 </style>
