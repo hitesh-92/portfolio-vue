@@ -16,22 +16,22 @@
                 >
 
                 <div class="form-top" id="form-name">
-                    <label for="name">Name</label>
+                    <label for="name" id="form-name-label">Name</label>
                     <input  
                         type="text" 
                         name="userName" 
-                        id="form-name"
+                        id = "form-name-input"
                         v-model.lazy="userData.name"
                         required
                     >
                 </div>
 
                 <div class="form-top" id="form-email">
-                    <label  for="email">Email</label>
+                    <label  for="email" id="form-email-label">Email</label>
                     <input 
                         type="email" 
                         name="userID" 
-                        id="form-email"
+                        id="form-email-input"
                         v-model.lazy="userData.email"
                         required
                     >
@@ -60,12 +60,11 @@
             <div id="contact-message" v-else>
                 <i>
                 <p>Thanks for getting in contact</p>
-                <p>I'll get get back to you ass soon as possible!</p>
+                <p>I'll get get back to you as soon as possible!</p>
                 </i>
             </div>
 
         </div>
-
     </div>
 </template>
 
@@ -83,17 +82,58 @@
         },
         methods: {
             formSubmit(){
+
+                let validName = false;
+                let validEmail = false;
+                let validMessage = false;
+
                 if(this.userData.name.length < 1){
-                    return
+                    document.getElementById('form-name-label').style.color = 'red';
+                    const id = document.getElementById('form-name-input');
+                    id.placeholder = 'Please enter your name';
+                    id.style.borderBottomColor = 'red';
+                    id.focus();
                 }
-                if(this.userData.email.length < 1){
-                    return
+
+                validName = true;
+
+                if(this.userData.email.length < 5){
+                    document.getElementById('form-email-label').style.color = 'red';
+                    const id = document.getElementById('form-email-input');
+                    id.placeholder = 'Please enter your email';
+                    id.style.borderBottomColor = 'red';
+                    if (validName){
+                        id.focus();
+                    }
+                } else if (this.userData.email.length >= 5) {
+                    //REGEX for email
                 }
+
+                validEmail = true;
+
                 if(this.userData.message.length < 1){
+                    const id = document.getElementById('form-message');
+                    id.placeholder = 'Looks like you forgot to add your message!'
                     return
                 }
-                this.isSubmitted = true;
-                document.getElementById('contact-form')
+
+                validMessage = true;
+
+                if (validName && validEmail && validMessage){
+                    let form = {};
+                    form.name = this.userData.name;
+                    form.email = this.userData.email;
+                    form.message = this.userData.message;
+
+                    
+
+                    this.isSubmitted = true;
+                }
+                
+                document.getElementById('contact-form');
+
+
+                
                
             }
         }
@@ -177,9 +217,8 @@
         outline-color: rgba(255, 255, 255, 0);
         border-radius: 5px;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
-        /* font-size: 1.3em;font-family: Arial, Helvetica, sans-serif; */
         font-size: 1.2em;
-        color: rgb(134, 143, 141);
+        color: rgb(113, 114, 114);
     }
 
     #form-submit-btn{
@@ -226,9 +265,6 @@
         text-align: center;
         color: rgb(97, 97, 97);
         font-size: 1.3em;
-
-
-        border: 1px solid black; 
     }
 
 

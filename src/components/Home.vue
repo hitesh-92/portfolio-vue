@@ -53,7 +53,7 @@ export default {
   
   p > strong {
     color: rgb(109, 109, 109);
-    font-size: 1.35em;
+    font-size: 1.1em;
   }
 
   #home-text{
