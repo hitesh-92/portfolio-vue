@@ -57,12 +57,21 @@
 
             </form>
 
-            <div id="contact-message" v-else>
+            <div id="contact-message-success" v-if="formSuccess">
                 <i>
                 <p>Thanks for getting in contact</p>
                 <p>I'll get get back to you as soon as possible!</p>
                 </i>
             </div>
+
+            <div id="contact-message-fail" v-if="formFail">
+                <p>There seems to have been a problem sending the message</p>
+                <p>Kindly send any message to <i>hiteshgohil@hotmail.co.uk</i></p>
+                <p>or send me an email <a href="mailto:hiteshgohil@hotmail.co.uk">here</a></p>
+                <p>Sorry for the inconvenience, i'll get back back to you as soon as possible</p>
+            </div>
+
+
 
         </div>
     </div>
@@ -77,7 +86,10 @@
                     email: '',
                     message: ''
                 },
-                isSubmitted: false
+                isSubmitted: false,
+                formProcessing: false,
+                formSuccess: false,
+                formFail: false
             }
         },
         methods: {
@@ -133,6 +145,29 @@
                     form.name = this.userData.name;
                     form.email = this.userData.email;
                     form.message = this.userData.message;
+
+                    const formStr = JSON.stringify(form);
+
+                    const res = fetch('http://127.0.0.1:5000/' + formStr)
+                        .then((data) => {res.json()})
+                        .then((data) => {
+
+                            //Display contact-message-success if the email is correctly sent
+                            // this.formProcessing = !this.formProcessing;
+                            this.formSuccess = !this.formSuccess;
+
+                            console.log(data);
+                            
+                        }).catch((e) => {
+                            
+                            //Display contact-message-fail
+                            this.formProcessing = !this.formProcessing;
+                            this.formFail = true;
+                            
+                            
+                        });
+
+
                     this.isSubmitted = true;
                 }
 
@@ -262,7 +297,15 @@
         color: rgb(109, 109, 109);
     }
 
-    #contact-message{
+    #contact-message-success{
+        grid-column: 2/8;
+        grid-row: 4/9;
+        text-align: center;
+        color: rgb(97, 97, 97);
+        font-size: 1.3em;
+    }
+
+    #contact-message-fail{
         grid-column: 2/8;
         grid-row: 4/9;
         text-align: center;
