@@ -2,9 +2,7 @@
     <div id="home">
 
       <div id="home-container">
-
-        <!-- <h1 id="home-title">Web developer</h1> -->
-
+        
         <div id="home-text">
           <p>Hello, my name is <strong>Hitesh</strong></p>
           <p>I'm a web developer from Leicester, UK</p>
@@ -28,26 +26,13 @@
     </div>
 </template>
 
-
-
-
-
-
 <script>
-
-export default {
-  name: 'Home',
-  data(){
-    return{
-      
-    }
-  },
-
-}
+  export default {
+    name: 'Home'
+  }
 </script>
 
 <style >
-
   #home-container{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -105,5 +90,4 @@ export default {
     text-decoration-line: none;
     color: rgb(89, 135, 204)
   }
-
 </style>

@@ -55,8 +55,6 @@
         box-shadow: 0px 1px 15px 0px rgb(165, 165, 165);
         background-color: white;
         color: rgb(134, 143, 141);
-
-        /* border: 1px solid red; */
     }
 
     #about-container > h1{
@@ -76,7 +74,6 @@
     #main-left > ul{
         list-style-type: none;
         padding-right: 5em;
-        /* text-align: center; */
     }
 
     #main-left > ul > li{
@@ -92,5 +89,4 @@
     #main-right > p{
         font-size: 1.1em;
     }
-    
 </style>

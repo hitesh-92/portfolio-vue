@@ -4,7 +4,7 @@
     <ul class="nav-list">
 
       <!-- <li id="nav-pic">
-        <img src="https://images.pexels.com/photos/1081235/pexels-photo-1081235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        <img src="#" alt="">
       </li> -->
 
       <li>
@@ -33,7 +33,6 @@
       
     </ul>
 
-    
   </div>
 </template>
 
@@ -52,7 +51,6 @@ export default {
 </script>
 
 <style scoped>
-
     ul{
       padding: 0 !important;
       margin-top: 35%;
@@ -103,5 +101,4 @@ export default {
       padding: 0.05em 0.4em;
       border-radius: 5px;
     }
-   
 </style>

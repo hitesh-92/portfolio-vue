@@ -77,12 +77,10 @@ export default {
     max-width: 100vw;
     margin: 0 auto;
     grid-template-areas: "app-nav app-body"
-
   }
 
   #app-nav{
     grid-area: 'app-nav';
-    /* border-right: 2px solid rgb(124, 188, 207); */
     width: 100%;
     height: 100vh;
     text-align: center;
@@ -91,16 +89,6 @@ export default {
   
   #app-body{
     grid-area: "app-body";
-    /* padding: 1em; */
     background: linear-gradient(to bottom right, rgb(254, 255, 255) , rgb(137, 212, 255));
   }
-
-  /* #app-home{
-    border: 2px solid purple;
-  } */
-
-  /* #app-about{
-    border: 2px solid green;
-  } */
-
 </style>

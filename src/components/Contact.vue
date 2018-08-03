@@ -52,8 +52,8 @@
                     id="form-submit-btn" 
                     type="submit" 
                     value="Submit" 
-                    @click.prevent="formSubmit">
-
+                    @click.prevent="formSubmit"
+                    >
 
             </form>
 
@@ -70,8 +70,6 @@
                 <p>or send me an email <a href="mailto:hiteshgohil@hotmail.co.uk">here</a></p>
                 <p>Sorry for the inconvenience, i'll get back back to you as soon as possible</p>
             </div>
-
-
 
         </div>
     </div>
@@ -163,10 +161,7 @@
                             //Display contact-message-fail
                             this.formProcessing = !this.formProcessing;
                             this.formFail = true;
-                            
-                            
                         });
-
 
                     this.isSubmitted = true;
                 }
@@ -239,8 +234,6 @@
         grid-row: 1/2;
     }
 
-    
-
     #form-email{
         grid-column: 6/10;
         grid-row: 1/2;
@@ -312,7 +305,4 @@
         color: rgb(97, 97, 97);
         font-size: 1.3em;
     }
-
-
-
 </style>
