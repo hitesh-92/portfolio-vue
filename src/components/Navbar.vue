@@ -106,7 +106,6 @@ export default {
     hr { 
       border: 0; 
       height: 1px; 
-      /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 89, 255, 0.3), rgba(0, 0, 0, 0));  */
       background: rgba(0,89,255, 0.13)
     }
 </style>
