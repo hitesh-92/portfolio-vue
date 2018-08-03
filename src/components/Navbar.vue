@@ -85,7 +85,7 @@ export default {
 
     #name{
       font-size: 1.2em;
-      text-shadow: 0.5px 0.5px 3px rgb(93, 115, 121);
+      text-shadow: 0.5px 0.5px 1px rgb(93, 115, 121);
       color: rgb(100, 100, 100);
       font-family: 'Ubuntu', sans-serif;
       font-weight: 500;
