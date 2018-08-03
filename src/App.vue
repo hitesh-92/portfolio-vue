@@ -85,6 +85,7 @@ export default {
     height: 100vh;
     text-align: center;
     box-sizing: border-box;
+    border-right: 2px solid rgba(0, 89, 255, 0.13);
   }
   
   #app-body{

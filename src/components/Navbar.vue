@@ -61,6 +61,7 @@ export default {
       font-family: sans-serif;
       font-size: 1.15em;
       margin: 1em 0em;
+
     }
 
     li> span:hover{
@@ -100,5 +101,12 @@ export default {
       border-right: 1.5px solid rgb(124, 188, 207);
       padding: 0.05em 0.4em;
       border-radius: 5px;
+    }
+
+    hr { 
+      border: 0; 
+      height: 1px; 
+      /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 89, 255, 0.3), rgba(0, 0, 0, 0));  */
+      background: rgba(0,89,255, 0.13)
     }
 </style>
