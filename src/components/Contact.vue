@@ -119,9 +119,26 @@
                     
                 } else if (this.userData.email.length >= 5) {
                     //REGEX for email
+                    function validateEmail(email) {
+                        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                        return re.test(String(email).toLowerCase());
+                    }
+
+                    const check  = validateEmail(this.userData.email);
+
+                    if(check){
+                        validEmail = true;
+                    } else {
+                        // document.getElementById('form-email-label').style.color = 'red';
+                        // const id = document.getElementById('form-email-input');
+                        // id.placeholder = 'Please enter your email';
+                        // id.style.borderBottomColor = 'red';
+                    }
+
+
 
                     //exec this if the regex passes
-                    validEmail = true;
+                    // validEmail = true;
                 } 
 
                 if(this.userData.message.length < 5){
