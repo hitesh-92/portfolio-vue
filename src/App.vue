@@ -71,27 +71,34 @@ export default {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
   }
-
-  #app{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    max-width: 100vw;
-    margin: 0 auto;
-    grid-template-areas: "app-nav app-body"
-  }
-
-  #app-nav{
-    grid-area: 'app-nav';
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    box-sizing: border-box;
-    border-right: 2px solid rgba(0, 89, 255, 0.13);
-  }
   
   #app-body{
-    grid-area: "app-body";
     background: linear-gradient(to bottom right, rgb(254, 255, 255) , rgb(137, 212, 255));
+  }
+
+
+  @media only screen and (min-width: 600px){
+    
+    #app{
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      max-width: 100vw;
+      margin: 0 auto;
+      grid-template-areas: "app-nav app-body"
+    }
+
+    #app-nav{
+      grid-area: 'app-nav';
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      box-sizing: border-box;
+      border-right: 2px solid rgba(0, 89, 255, 0.13);
+    }
+    
+    #app-body{
+      grid-area: "app-body";
+    }
   }
 
 
@@ -110,28 +117,22 @@ export default {
     #app{
       display: grid;
       grid-template-rows: 100% 1fr;
-      margin:0;
-      padding:0;
-      grid-template-areas: none;
-      /* height: auto; */
-      /* height:100vh;width:100vw; */
     }
 
     #app-body{
       grid-row: 2/3;
-      margin:0;
-      padding:0;
-      height: 100%;
     }
 
     #app-nav{
-      /* display: none; */
       grid-row: 1/2;
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100vw;
-      /* visibility: hidden; */
+    }
+
+    #app-about{
+      min-height: 100vh;
     }
 
   }

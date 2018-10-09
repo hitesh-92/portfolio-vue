@@ -36,7 +36,6 @@
 
             </div>
 
-
         </div>
 
     </div>
@@ -114,32 +113,25 @@
         #about-container{
             margin:0;
             padding:0;
-            width: 100%;
-            height: 100vh;
         }
 
         #about-main{
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: 75px 1fr 1fr;
             margin:0;
             padding:0;
-            height: 100%;
         }
 
         #main-left{
             grid-row: 3/4;
             padding: 0;
-            padding-top: 2em;;
             margin: 0;
-            height: 90%
         }
 
         #main-right{
             grid-row: 2/3;
             margin: 0px;
             padding: 0px;
-            width: 100%;
-            height: 100%;
             color: rgb(134, 143, 141);
         }
 
@@ -148,8 +140,8 @@
         }
 
         #main-left > ul{
-            margin: 0px 0xp;
-            padding: 0px 0px;;
+            margin: 0px 0px;
+            padding: 0px 0px;
             text-align: center;
             list-style-type: none;
             color: rgb(134, 143, 141);
@@ -164,8 +156,8 @@
         #about-title{
             grid-row: 1/2;
             text-align: center;
-            height: 2em;
             font-size: 1.2em;
+            padding-top: 10px;
         }
 
         .about-left-list > li{
