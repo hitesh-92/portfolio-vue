@@ -49,7 +49,7 @@
 
 <style scoped>
 
-    @media only screen and (min-width: 600px){
+    @media only screen and (min-width: 700px){
 
         #about{
             height: 500px;
@@ -108,7 +108,7 @@
         }
     }
 
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 700px){
 
         #about-container{
             margin:0;

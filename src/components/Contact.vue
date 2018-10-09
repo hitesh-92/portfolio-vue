@@ -194,7 +194,7 @@
 
 <style scoped>
 
-    @media only screen and (min-width: 600px){
+    @media only screen and (min-width: 700px){
 
         #contact-container{
         display: grid;
@@ -329,8 +329,7 @@
 
     }
 
-
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 700px){
 
         #contact-container{
             display: grid;
@@ -421,6 +420,15 @@
         }
 
         #contact-message-fail > p{
+            padding: 10px 0;
+        }
+
+        #contact-message-success{
+            grid-row: 2/3;
+            padding: 10px 15px;
+        }
+
+        #contact-message-success > p{
             padding: 10px 0;
         }
 

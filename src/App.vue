@@ -29,9 +29,9 @@ export default {
   name: 'App',
   data () {
     return {
-      appHome: false,
+      appHome: true,
       appAbout: false,
-      appContact: true
+      appContact: false
     }
   },
   methods: {
@@ -77,7 +77,7 @@ export default {
   }
 
 
-  @media only screen and (min-width: 600px){
+  @media only screen and (min-width: 700px){
     
     #app{
       display: grid;
@@ -102,7 +102,7 @@ export default {
   }
 
 
-  @media only screen and (max-width: 600px){
+  @media only screen and (max-width: 700px){
 
     @viewport{
       height: 100%;

@@ -32,7 +32,9 @@
     <div class="nav-small">
       <p id="nav-small-name">Hitesh Gohil</p>
       <div id="nav-small-sign">
-        <span>X</span>
+        <span @click="selectHome()" class="nav-small-menu-icon">Home</span>
+        <span @click="selectAbout()" class="nav-small-menu-icon">About</span>
+        <span @click="selectContact()" class="nav-small-menu-icon">Contact</span>
       </div>
     </div>
 
@@ -55,7 +57,7 @@ export default {
 
 <style scoped>
 
-  @media only screen and (min-width: 600px){
+  @media only screen and (min-width: 700px){
     ul{
       padding: 0 !important;
       margin-top: 35%;
@@ -119,7 +121,7 @@ export default {
     }
   }
 
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 700px){
 
       #navbar{
         display: inline-block;
@@ -148,6 +150,17 @@ export default {
 
       #nav-small-sign{
         float: right;
+        margin-right: 10px;
+        border: 1px solid red;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-small-menu-icon{
+        display: inline;
+        margin: 0;
+        padding: 0;
+       
       }
 
     }
