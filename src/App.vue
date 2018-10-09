@@ -30,8 +30,8 @@ export default {
   data () {
     return {
       appHome: false,
-      appAbout: true,
-      appContact: false
+      appAbout: false,
+      appContact: true
     }
   },
   methods: {

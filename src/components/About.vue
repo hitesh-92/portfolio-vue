@@ -13,7 +13,7 @@
 
                     <ul class="about-left-list">
                         <li>JavaScript</li>
-                        <li>HTML5 / CSS3</li>
+                        <li>HTML / CSS</li>
                         <li>jQuery</li>
                         <li>Vue.js</li>
                         <li>Node.js</li>
