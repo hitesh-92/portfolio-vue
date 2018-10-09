@@ -108,15 +108,17 @@ export default {
     }
 
     #app{
-      display: inline-block;
+      display: grid;
+      grid-template-rows: 100% 1fr;
       margin:0;
       padding:0;
       grid-template-areas: none;
-      height: auto;
+      /* height: auto; */
       /* height:100vh;width:100vw; */
     }
 
     #app-body{
+      grid-row: 2/3;
       margin:0;
       padding:0;
       height: 100%;
@@ -124,6 +126,7 @@ export default {
 
     #app-nav{
       /* display: none; */
+      grid-row: 1/2;
       margin: 0;
       padding: 0;
       height: 100%;

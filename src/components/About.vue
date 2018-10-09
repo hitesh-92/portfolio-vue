@@ -107,60 +107,11 @@
         #main-left > p{
             display: none;
         }
-
-
     }
-
-    /*
-    #about-container{
-        height: 70vh;
-        margin: 2em 1em;
-        padding: 1em 3em;
-        text-align: center;
-        border-radius: 1px;
-        box-shadow: 0px 1px 15px 0px rgb(165, 165, 165);
-        background-color: white;
-        color: rgb(134, 143, 141);
-    }
-
-    #about-container > h1{
-        margin: 1em 0em;
-    }
-
-    #about-main{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        margin-top: 5em;
-    }
-
-    #main-left{
-        font-size: 1.05em;
-    }
-
-    #main-left > ul{
-        list-style-type: none;
-        padding-right: 5em;
-    }
-
-    #main-left > ul > li{
-        margin: 0.5em 0em;
-    }
-
-    #main-right{
-        text-align: left;
-        box-sizing: border-box;
-        height: 100%;
-    }
-
-    #main-right > p{
-        font-size: 1.1em;
-    }
-    */
 
     @media only screen and (max-width: 600px){
 
         #about-container{
-            /* display: block; */
             margin:0;
             padding:0;
             width: 100%;
@@ -169,15 +120,13 @@
 
         #about-main{
             display: grid;
-            grid-template-rows: 100px 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
             margin:0;
             padding:0;
-            width: 100%;
             height: 100%;
         }
 
         #main-left{
-            /* border: 3px solid green; */
             grid-row: 3/4;
             padding: 0;
             padding-top: 2em;;
@@ -186,27 +135,33 @@
         }
 
         #main-right{
-            /* border: 3px solid red; */
             grid-row: 2/3;
             margin: 0px;
-            padding: 0px 0px;
-            width: 100vw;
+            padding: 0px;
+            width: 100%;
             height: 100%;
+            color: rgb(134, 143, 141);
+        }
+
+        #main-right > p{
+            padding: 0px 20px;
         }
 
         #main-left > ul{
             margin: 0px 0xp;
             padding: 0px 0px;;
             text-align: center;
+            list-style-type: none;
+            color: rgb(134, 143, 141);
         }
         
         #main-left > p{
             text-align: center;
             padding: 0 10px;
+            color: rgb(134, 143, 141);
         }
 
         #about-title{
-            border: 3px solid black;
             grid-row: 1/2;
             text-align: center;
             height: 2em;
@@ -216,7 +171,6 @@
         .about-left-list > li{
             margin: 3px 0px;
         }
-
-
     }
+
 </style>
