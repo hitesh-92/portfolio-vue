@@ -143,7 +143,7 @@ export default {
         padding-left: 10px;
         float: left;
 
-        border: 1px solid red;
+        /* border: 1px solid red; */
       }
 
       #nav-small-sign{
