@@ -11,7 +11,7 @@
                     
                     <p>Some languages and techonologies I've tinkered and worked with</p>
 
-                    <ul>
+                    <ul class="about-left-list">
                         <li>JavaScript</li>
                         <li>HTML5 / CSS3</li>
                         <li>jQuery</li>
@@ -195,10 +195,9 @@
         }
 
         #main-left > ul{
-            margin: 0;
+            margin: 0px 0xp;
             padding: 0px 0px;;
             text-align: center;
-            
         }
         
         #main-left > p{
@@ -207,9 +206,15 @@
         }
 
         #about-title{
-            /* border: 3px solid black; */
+            border: 3px solid black;
             grid-row: 1/2;
-            
+            text-align: center;
+            height: 2em;
+            font-size: 1.2em;
+        }
+
+        .about-left-list > li{
+            margin: 3px 0px;
         }
 
 
