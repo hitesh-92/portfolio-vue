@@ -51,6 +51,11 @@
 <style scoped>
 
     @media only screen and (min-width: 600px){
+
+        #about{
+            height: 500px;
+        }
+
         #about-container{
         height: 70vh;
         margin: 2em 1em;
@@ -172,7 +177,7 @@
         }
 
         #main-left{
-            border: 3px solid green;
+            /* border: 3px solid green; */
             grid-row: 3/4;
             padding: 0;
             padding-top: 2em;;
@@ -181,18 +186,17 @@
         }
 
         #main-right{
-            border: 3px solid red;
+            /* border: 3px solid red; */
             grid-row: 2/3;
-            margin: 0;
-            padding: 0;
-            padding-top: 40px;
+            margin: 0px;
+            padding: 0px 0px;
             width: 100vw;
-            height: 90%;
+            height: 100%;
         }
 
         #main-left > ul{
             margin: 0;
-            padding: 20px 0px;;
+            padding: 0px 0px;;
             text-align: center;
             
         }
@@ -203,7 +207,7 @@
         }
 
         #about-title{
-            border: 3px solid black;
+            /* border: 3px solid black; */
             grid-row: 1/2;
             
         }

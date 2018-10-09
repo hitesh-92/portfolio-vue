@@ -65,6 +65,7 @@ export default {
 </script>
 
 <style>
+
   body{
     padding: 0;
     margin: 0;
@@ -93,7 +94,12 @@ export default {
     background: linear-gradient(to bottom right, rgb(254, 255, 255) , rgb(137, 212, 255));
   }
 
+
   @media only screen and (max-width: 600px){
+
+    @viewport{
+      height: 100%;
+    }
 
     body{
       margin: 0;
@@ -102,9 +108,11 @@ export default {
     }
 
     #app{
-      display: inline;
+      display: inline-block;
       margin:0;
       padding:0;
+      grid-template-areas: none;
+      height: auto;
       /* height:100vh;width:100vw; */
     }
 
@@ -115,9 +123,11 @@ export default {
     }
 
     #app-nav{
-      display: none;
+      /* display: none; */
       margin: 0;
       padding: 0;
+      height: 100%;
+      width: 100vw;
       /* visibility: hidden; */
     }
 
