@@ -69,6 +69,8 @@
                 <p>Kindly send any message to <i>hiteshgohil@hotmail.co.uk</i></p>
                 <p>or send me an email <a href="mailto:hiteshgohil@hotmail.co.uk">here</a></p>
                 <p>Sorry for the inconvenience, i'll get back back to you as soon as possible</p>
+                <i>A notice of this serivce not working would be much appreciated</i>
+                <p>I look forward to hearing from you</p>
             </div>
 
         </div>
@@ -338,7 +340,7 @@
         #contact-heading{
             grid-row: 1/2;
             text-align: center;
-            padding-top: 10px;
+            padding-top: 20px;
         }
 
         #contact-heading > p{
@@ -415,7 +417,11 @@
 
         #contact-message-fail{
             grid-row: 2/3;
-            padding: 0 10px;
+            padding: 10px 15px;
+        }
+
+        #contact-message-fail > p{
+            padding: 10px 0;
         }
 
     }
