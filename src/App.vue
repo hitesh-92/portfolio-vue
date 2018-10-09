@@ -29,8 +29,8 @@ export default {
   name: 'App',
   data () {
     return {
-      appHome: true,
-      appAbout: false,
+      appHome: false,
+      appAbout: true,
       appContact: false
     }
   },
@@ -91,5 +91,35 @@ export default {
   #app-body{
     grid-area: "app-body";
     background: linear-gradient(to bottom right, rgb(254, 255, 255) , rgb(137, 212, 255));
+  }
+
+  @media only screen and (max-width: 600px){
+
+    body{
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    #app{
+      display: inline;
+      margin:0;
+      padding:0;
+      /* height:100vh;width:100vw; */
+    }
+
+    #app-body{
+      margin:0;
+      padding:0;
+      height: 100%;
+    }
+
+    #app-nav{
+      display: none;
+      margin: 0;
+      padding: 0;
+      /* visibility: hidden; */
+    }
+
   }
 </style>

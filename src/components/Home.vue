@@ -90,4 +90,17 @@
     text-decoration-line: none;
     color: rgb(89, 135, 204)
   }
+
+  @media only screen and (max-width: 600px){
+
+    #home-container{
+      display: grid;
+      margin: 0;
+      padding: 0;
+      height:100vh;
+      width:100vw;
+
+    }
+
+  }
 </style>

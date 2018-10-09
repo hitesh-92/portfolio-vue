@@ -322,4 +322,10 @@
         color: rgb(97, 97, 97);
         font-size: 1.3em;
     }
+
+    @media only screen and (max-width: 600px{
+
+        
+
+    }
 </style>
