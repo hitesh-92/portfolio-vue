@@ -11,7 +11,11 @@
     />
 
     <div id="app-body">
-      <Home id="app-home" v-if="appHome"/>
+      <Home
+        id="app-home"
+        v-if="appHome"
+        :selectContact="switchToContact"
+        />
       <About id="app-about" v-if="appAbout" />
       <Contact id="app-contact" v-if="appContact" />
     </div>

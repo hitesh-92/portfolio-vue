@@ -6,10 +6,10 @@
         <div id="home-text">
           <p>Hi there,</p>
           <p>I'm a self taught developer from Leicester</p>
-          <p>I enjoy focusing on making web sites and apps using JavaScript</p>
+          <p>I enjoy focusing on making web sites and web apps using JavaScript</p>
           <p>I’m always looking for a challenge</p>
           <p>If there’s anything I could do for you or help you with </p>
-          <p>contact me here</p>
+          <p id="home-text-contact">Contact Me <span @click="selectContact()">Here</span> </p>
         </div>
 
         <div id="my-links">
@@ -26,7 +26,10 @@
 
 <script>
   export default {
-    name: 'Home'
+    name: 'Home',
+    props: {
+      selectContact: Function
+    }
   }
 </script>
 
@@ -38,7 +41,7 @@
       display: grid;
       grid-template-rows: 10em 1fr;
       text-shadow: 0.75px 0.75px 0.75px rgb(255, 255, 255);
-      color: rgb(134, 143, 141);
+      font-size: 1.2em
     }
 
     #home-text{
@@ -82,18 +85,21 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
   }
 
-  #home-contact-btn > a:hover {
-    transition: 0.2s ease-in-out;
-    box-shadow: 2px 2px 2px 1px rgba(151, 151, 255, 0.2);
-    color: rgb(231, 246, 253);
-  }
-
-
   #my-links > p > span > a{
     padding-left: 5px;
     text-decoration-line: none;
     color: rgb(89, 135, 204)
-  } 
+  }
+
+  #home-text-contact{
+    text-shadow: none;
+  }
+
+  #home-text-contact > span{
+    color: rgb(57, 115, 161);
+    cursor: pointer;
+
+  }
 
   @media only screen and (max-width: 700px){
 
@@ -101,13 +107,12 @@
       display: grid;
       grid-template-rows: 1fr;
       text-shadow: 0.75px 0.75px 0.75px rgb(255, 255, 255);
-      color: rgb(134, 143, 141);
-
     }
 
     #home-text{
       grid-row:1/2;
-      padding: 10px 15px;
+      padding-top: 2em;
+      margin: 2em 1em;
     }
 
     #home-text > p{
@@ -116,7 +121,7 @@
 
     #my-links{
       text-align: center;
-      padding: 10px 20px;
+      padding: 2em;
     }
   }
 </style>
