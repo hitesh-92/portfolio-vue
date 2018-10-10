@@ -264,5 +264,9 @@ export default {
         padding: 1.5em 0;
       }
 
+      .active{
+        color: red !important;
+      }
+
     }
 </style>
