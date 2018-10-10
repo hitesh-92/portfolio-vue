@@ -4,10 +4,12 @@
       <div id="home-container">
         
         <div id="home-text">
-          <p>Hello, my name is <strong>Hitesh</strong></p>
-          <p>I'm a web developer from Leicester, UK</p>
-          <p> I make web applications usually with JavaScript</p>
-          <p>Feel free to browse around and get in touch if you want to me ask me anything</p>
+          <p>Hi there,</p>
+          <p>I'm a self taught developer from Leicester</p>
+          <p>I enjoy focusing on making web sites and apps using JavaScript</p>
+          <p>I’m always looking for a challenge</p>
+          <p>If there’s anything I could do for you or help you with </p>
+          <p>contact me here</p>
         </div>
 
         <div id="my-links">
@@ -31,41 +33,34 @@
 <style>
 
   @media only screen and (min-width: 700px){
-
-    #home-container{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(8,1fr);
-    margin: 1em;
-    height: 80vh;
-    text-shadow: 0.75px 0.75px 0.75px rgb(255, 255, 255);
-    color: rgb(134, 143, 141);
-    }
     
-    p > strong {
-      font-size: 1.1em;
+    #home-container{
+      display: grid;
+      grid-template-rows: 10em 1fr;
+      text-shadow: 0.75px 0.75px 0.75px rgb(255, 255, 255);
+      color: rgb(134, 143, 141);
     }
 
     #home-text{
-      grid-column: 2/5;
-      grid-row: 3/5;
-      font-size: 1.3em;
+      grid-row:2/3;
+      padding: 10px 15px;
+      text-align: center;
+    }
+
+    #home-text > p{
+      padding: 0px 10px;
     }
 
     #my-links{
-      grid-column: 1/5;
-      grid-row: 8/9;
+      grid-row: 3/4;
+      text-align: center;
+      padding: 10px 20px;
     }
 
-    #my-links > p > span > a{
-      padding-left: 5px;
-      text-decoration-line: none;
-      color: rgb(89, 135, 204)
+    #my-links > span{
+      text-shadow: 0.75px 0.75px 0.75px rgb(255, 255, 255);
     }
-  }
 
-  p > strong {
-    color: rgb(109, 109, 109);
   }
 
   #home-text{
@@ -104,7 +99,7 @@
 
     #home-container{
       display: grid;
-      grid-template-rows: 1fr 100px 1fr;
+      grid-template-rows: 1fr;
       text-shadow: 0.75px 0.75px 0.75px rgb(255, 255, 255);
       color: rgb(134, 143, 141);
 
@@ -112,9 +107,7 @@
 
     #home-text{
       grid-row:1/2;
-
       padding: 10px 15px;
-
     }
 
     #home-text > p{
