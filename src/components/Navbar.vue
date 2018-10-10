@@ -46,6 +46,9 @@
     </div>
 
     <div class="nav-small-menu">
+
+      <i class="fas fa-times"></i>      
+
       <ul class="nav-small-list">
 
         <li @click="selectHome()">
@@ -242,7 +245,6 @@ export default {
       .nav-small-menu{
         /* display: none; */
         z-index: 99;
-        margin-top: 3.5em;
         text-align: center;
         transition: all 0.3s;
         box-shadow: 10px 15px 50px 20px rgb(55, 61, 66);
@@ -272,14 +274,20 @@ export default {
       }
 
       .active{
-        color: red !important;
+        color: rgb(84, 166, 172) !important;
       }
 
       .fa-bars{
         width: 1em;
         padding-top: 1em;
         padding-right: 0.4em;
-        color: rgb(57, 128, 175);
+        color: rgb(0, 195, 255);
+      }
+
+      .fa-times{
+        color: red;
+        float: right;
+        margin: 1em;
       }
 
     }
