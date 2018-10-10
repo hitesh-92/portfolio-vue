@@ -35,9 +35,11 @@
 
       <div id="nav-small-sign" @click="navMenu()">
 
-        <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+
+        <!-- <div class="menu-icon">
           <span></span>
-        </div>
+        </div> -->
 
       </div>
 
@@ -248,7 +250,7 @@ export default {
         position:fixed;
         height:100%;
         width:100%;
-        background:rgba(80, 80, 80, 0.985);
+        background:rgba(80, 80, 80, 0.9);
         overflow:auto;
         z-index:99;
       }
@@ -261,11 +263,23 @@ export default {
       }
 
       .nav-small-list > li{
-        padding: 1.5em 0;
+        padding: 1em 0em;
+        margin: 1em 0;
+        margin-right: 6em;
+        margin-left: 4em;
+        background-color: rgb(75, 75, 75);
+        border-radius: 10px;
       }
 
       .active{
         color: red !important;
+      }
+
+      .fa-bars{
+        width: 1em;
+        padding-top: 1em;
+        padding-right: 0.4em;
+        color: rgb(57, 128, 175);
       }
 
     }
