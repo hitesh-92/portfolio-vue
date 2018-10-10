@@ -55,6 +55,7 @@
 
         #about-container{
         color: rgb(134, 143, 141);
+        margin: 2em 3em;
         }
 
         #about-main{
@@ -77,7 +78,7 @@
         }
 
         #main-right{
-            margin: 3em 2em;
+            /* margin: 3em 2em; */
             padding: 2em 3em;
             grid-row: 1/2;
             background-color: white; 

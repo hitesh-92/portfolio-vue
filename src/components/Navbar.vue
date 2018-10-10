@@ -31,11 +31,21 @@
 
     <div class="nav-small">
       <p id="nav-small-name">Hitesh Gohil</p>
-      <div id="nav-small-sign">
+
+      <!-- <div id="nav-small-sign">
         <span @click="selectHome()" class="nav-small-menu-icon">Home</span>
         <span @click="selectAbout()" class="nav-small-menu-icon">About</span>
         <span @click="selectContact()" class="nav-small-menu-icon">Contact</span>
+      </div> -->
+
+      <div id="nav-small-sign">
+
+        <div class="menu-icon" @click="navMenu()">
+          <span></span>
+        </div>
+
       </div>
+
     </div>
 
   </div>
@@ -51,7 +61,26 @@ export default {
     homeStatus: Boolean,
     aboutStatus: Boolean,
     contactStatus: Boolean
+  },
+  methods: {
+    navMenu(){
+
+      var button = document.querySelector('.menu-icon');
+
+      button.addEventListener('click', function(){
+        button.classList.toggle('open');
+      });
+
+    }
+  
   }
+  /*
+  var button = document.querySelector('.menu-icon');
+
+  button.addEventListener('click', function (){
+    button.classList.toggle('open');
+  });
+  */
 }
 </script>
 
@@ -64,11 +93,10 @@ export default {
     }
 
     li{
-      list-style-type: none !important;
+      list-style-type: none;
       font-family: sans-serif;
       font-size: 1.15em;
       margin: 1em 0em;
-
     }
 
     li> span:hover{
@@ -78,13 +106,6 @@ export default {
     li:hover > span{
       transition: 0.2s ease-in;
       color: rgb(0, 195, 255);
-    }
-
-    img{
-      width: 90px;
-      height: 90px;
-      border-radius: 50px;
-      margin-bottom: 1em;
     }
 
     span{
@@ -123,45 +144,85 @@ export default {
 
     @media only screen and (max-width: 700px){
 
-      #navbar{
-        display: inline-block;
-        margin: 0;
-        padding: 10px;
-        height: 100%;
-        width: 100vw;
-        
-      }
+      /* .nav-small{
+
+      } */
 
       .nav-list{
         display: none;
       }
 
-      .nav-small{
-        /* border-color: red; */
-        /* background-color: aqua; */
-      }
-
       #nav-small-name{
         padding-left: 10px;
         float: left;
-
-        /* border: 1px solid red; */
       }
 
       #nav-small-sign{
         float: right;
-        margin-right: 10px;
-        border: 1px solid red;
-        margin: 0;
-        padding: 0;
       }
 
-      .nav-small-menu-icon{
-        display: inline;
-        margin: 0;
-        padding: 0;
-       
+      /* Menu icon copied */
+      .menu-icon {
+        position: relative;
+        top: 0.5em;
+        display: block;
+        width: 4em;
+        height: 2.5em;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
       }
+
+      .menu-icon > span {
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 80%;
+        height: 0.5em;
+        margin-top: -0.5em;
+        background-color: #358e9e;
+        border-radius: 3px;
+      }
+
+      .menu-icon > span:before, .menu-icon > span:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #358e9e;
+        border-radius: 3px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+
+      .menu-icon > span:before {
+        -webkit-transform: translateY(-1em);
+        transform: translateY(-1em);
+      }
+
+      .menu-icon > span:after {
+        -webkit-transform: translateY(1em);
+        transform: translateY(1em);
+      }
+
+      /* 
+       OPENED
+      */
+
+      .menu-icon.open {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      .menu-icon.open > span:before {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+
+      .menu-icon.open > span:after {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+      
 
     }
 </style>

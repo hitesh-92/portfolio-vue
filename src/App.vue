@@ -85,7 +85,7 @@ export default {
     
     #app{
       display: grid;
-      grid-template-columns: 1fr 4fr;
+      grid-template-columns: 20% 4fr;
       max-width: 100vw;
       margin: 0 auto;
       grid-template-areas: "app-nav app-body"
@@ -107,10 +107,6 @@ export default {
 
 
   @media only screen and (max-width: 700px){
-
-    @viewport{
-      height: 100%;
-    }
 
     body{
       margin: 0;
