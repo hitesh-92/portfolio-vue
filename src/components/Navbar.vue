@@ -38,9 +38,9 @@
         <span @click="selectContact()" class="nav-small-menu-icon">Contact</span>
       </div> -->
 
-      <div id="nav-small-sign">
+      <div id="nav-small-sign" @click="navMenu()">
 
-        <div class="menu-icon" @click="navMenu()">
+        <div class="menu-icon">
           <span></span>
         </div>
 
@@ -159,6 +159,8 @@ export default {
 
       #nav-small-sign{
         float: right;
+        margin-right: 5px;
+        border: 1px solid red;
       }
 
       /* Menu icon copied */
@@ -187,7 +189,7 @@ export default {
         content: "";
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 0.5em;
         background-color: #358e9e;
         border-radius: 3px;
         -webkit-transition: all 0.3s;
