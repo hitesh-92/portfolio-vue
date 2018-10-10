@@ -30,13 +30,8 @@
     </ul>
 
     <div class="nav-small">
-      <p id="nav-small-name">Hitesh Gohil</p>
 
-      <!-- <div id="nav-small-sign">
-        <span @click="selectHome()" class="nav-small-menu-icon">Home</span>
-        <span @click="selectAbout()" class="nav-small-menu-icon">About</span>
-        <span @click="selectContact()" class="nav-small-menu-icon">Contact</span>
-      </div> -->
+      <p id="nav-small-name">Hitesh Gohil</p>
 
       <div id="nav-small-sign" @click="navMenu()">
 
@@ -46,6 +41,24 @@
 
       </div>
 
+    </div>
+
+    <div class="nav-small-menu">
+      <ul class="nav-small-list">
+
+        <li @click="selectHome()">
+          <span :class="[{active: homeStatus}]">Home</span>
+        </li>
+
+        <li @click="selectAbout()">
+          <span :class="[{active: aboutStatus}]">About</span>
+        </li>
+
+        <li @click="selectContact()">
+          <span :class="[{active: contactStatus}]">Contact</span>
+        </li>
+
+      </ul>
     </div>
 
   </div>
@@ -64,22 +77,15 @@ export default {
   },
   methods: {
     navMenu(){
-
       var button = document.querySelector('.menu-icon');
-
-      button.addEventListener('click', function(){
+      button.addEventListener('click', function (){
         button.classList.toggle('open');
       });
-
     }
   
   }
   /*
-  var button = document.querySelector('.menu-icon');
-
-  button.addEventListener('click', function (){
-    button.classList.toggle('open');
-  });
+  
   */
 }
 </script>
@@ -137,9 +143,11 @@ export default {
       background: rgba(0,89,255, 0.13)
     }
 
-    .nav-small{
+    .nav-small, .nav-small-menu{
       display: none;
     }
+
+
   }
 
     @media only screen and (max-width: 700px){
@@ -159,8 +167,7 @@ export default {
 
       #nav-small-sign{
         float: right;
-        margin-right: 5px;
-        border: 1px solid red;
+        margin-right: 15px;
       }
 
       /* Menu icon copied */
@@ -168,8 +175,12 @@ export default {
         position: relative;
         top: 0.5em;
         display: block;
-        width: 4em;
-        height: 2.5em;
+        width: 3.5em;
+        height: 2.75em;
+        cursor: pointer;
+        /* to center */
+        margin: 0em auto;
+        float: none;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
       }
@@ -178,19 +189,20 @@ export default {
         position: absolute;
         top: 50%;
         display: block;
-        width: 80%;
-        height: 0.5em;
+        width: 90%;
+        height: 0.2em;
         margin-top: -0.5em;
-        background-color: #358e9e;
+        background-color: rgb(107, 155, 170);
         border-radius: 3px;
       }
 
-      .menu-icon > span:before, .menu-icon > span:after {
+      .menu-icon > span:before,
+      .menu-icon > span:after {
         content: "";
         position: absolute;
         width: 100%;
-        height: 0.5em;
-        background-color: #358e9e;
+        height: 100%;
+        background-color: rgb(108, 141, 151);
         border-radius: 3px;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
@@ -203,12 +215,10 @@ export default {
 
       .menu-icon > span:after {
         -webkit-transform: translateY(1em);
-        transform: translateY(1em);
+      transform: translateY(1em);
       }
 
-      /* 
-       OPENED
-      */
+      /* OPENED */
 
       .menu-icon.open {
         -webkit-transform: rotate(45deg);
@@ -224,7 +234,35 @@ export default {
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
       }
-      
+
+      /* nav menu items */
+
+      .nav-small-menu{
+        /* display: none; */
+        z-index: 99;
+        margin-top: 3.5em;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 10px 15px 50px 20px rgb(55, 61, 66);
+
+        position:fixed;
+        height:100%;
+        width:100%;
+        background:rgba(80, 80, 80, 0.985);
+        overflow:auto;
+        z-index:99;
+      }
+
+      .nav-small-list{
+        color: white;
+        list-style-type: none;
+        text-align: center;
+        padding-top: 3em;
+      }
+
+      .nav-small-list > li{
+        padding: 1.5em 0;
+      }
 
     }
 </style>
