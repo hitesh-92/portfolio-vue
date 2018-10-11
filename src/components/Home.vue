@@ -5,7 +5,7 @@
         
         <div id="home-text">
           <p>Hi there,</p>
-          <p>I'm a self taught developer from Leicester</p>
+          <p>I'm a web developer from Leicester</p>
           <p>I enjoy focusing on making web sites and web apps using JavaScript</p>
           <p>I’m always looking for a challenge</p>
           <p>If there’s anything I could do for you or help you with </p>
@@ -98,7 +98,6 @@
   #home-text-contact > span{
     color: rgb(57, 115, 161);
     cursor: pointer;
-
   }
 
   @media only screen and (max-width: 700px){

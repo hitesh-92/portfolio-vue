@@ -38,10 +38,13 @@ export default {
       appContact: false
     }
   },
+  props: {
+    overlay: Function
+  },
   methods: {
     switchToHome(){
       this.hideAll();
-      this.appHome = true;     
+      this.appHome = true;
     },
     switchToAbout(){
       this.hideAll();

@@ -33,33 +33,27 @@
 
       <p id="nav-small-name">Hitesh Gohil</p>
 
-      <div id="nav-small-sign" @click="navMenu()">
-
+      <div id="nav-small-sign" @click="toggleOverlay()">
         <i class="fas fa-bars"></i>
-
-        <!-- <div class="menu-icon">
-          <span></span>
-        </div> -->
-
       </div>
 
     </div>
 
-    <div class="nav-small-menu">
+    <div class="nav-small-menu" :class="[{active: navOverlay}]">
 
-      <i class="fas fa-times"></i>      
+      <i class="fas fa-times" @click="toggleOverlay()" :overlay="closeOverlay"></i>      
 
       <ul class="nav-small-list">
 
-        <li @click="selectHome()">
+        <li @click="[selectHome(), closeOverlay()]">
           <span :class="[{active: homeStatus}]">Home</span>
         </li>
 
-        <li @click="selectAbout()">
+        <li @click="[selectAbout(), closeOverlay()]">
           <span :class="[{active: aboutStatus}]">About</span>
         </li>
 
-        <li @click="selectContact()">
+        <li @click="[selectContact(), closeOverlay()]">
           <span :class="[{active: contactStatus}]">Contact</span>
         </li>
 
@@ -72,6 +66,11 @@
 <script>
 export default {
   name: 'Navbar',
+  data(){
+    return{
+      navOverlay: false
+    }
+  },
   props: {
     selectHome: Function,
     selectAbout: Function,
@@ -86,8 +85,14 @@ export default {
       button.addEventListener('click', function (){
         button.classList.toggle('open');
       });
+    },
+    toggleOverlay(){
+      this.navOverlay = !this.navOverlay;
+      console.log(`toggleOverlay: ${this.navOverlay}`);
+    },
+    closeOverlay(){
+      this.navOverlay = false;
     }
-  
   }
   /*
   
@@ -172,81 +177,15 @@ export default {
 
       #nav-small-sign{
         float: right;
-        margin-right: 15px;
-      }
-
-      /* Menu icon copied */
-      .menu-icon {
-        position: relative;
-        top: 0.5em;
-        display: block;
-        width: 3.5em;
-        height: 2.75em;
-        cursor: pointer;
-        /* to center */
-        margin: 0em auto;
-        float: none;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-      }
-
-      .menu-icon > span {
-        position: absolute;
-        top: 50%;
-        display: block;
-        width: 90%;
-        height: 0.2em;
-        margin-top: -0.5em;
-        background-color: rgb(107, 155, 170);
-        border-radius: 3px;
-      }
-
-      .menu-icon > span:before,
-      .menu-icon > span:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(108, 141, 151);
-        border-radius: 3px;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-      }
-
-      .menu-icon > span:before {
-        -webkit-transform: translateY(-1em);
-        transform: translateY(-1em);
-      }
-
-      .menu-icon > span:after {
-        -webkit-transform: translateY(1em);
-      transform: translateY(1em);
-      }
-
-      /* OPENED */
-
-      .menu-icon.open {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-      }
-
-      .menu-icon.open > span:before {
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-      }
-
-      .menu-icon.open > span:after {
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
       }
 
       /* nav menu items */
 
       .nav-small-menu{
-        /* display: none; */
+        display: none;
         z-index: 99;
         text-align: center;
-        transition: all 0.3s;
+        transition: all 10.3s;
         box-shadow: 10px 15px 50px 20px rgb(55, 61, 66);
 
         position:fixed;
@@ -271,17 +210,18 @@ export default {
         margin-left: 4em;
         background-color: rgb(75, 75, 75);
         border-radius: 10px;
+        font-weight: lighter;
       }
 
       .active{
         color: rgb(84, 166, 172) !important;
+        display: block !important;
       }
 
       .fa-bars{
-        width: 1em;
-        padding-top: 1em;
-        padding-right: 0.4em;
+        margin: 1em;
         color: rgb(0, 195, 255);
+        /* display: none; */
       }
 
       .fa-times{
