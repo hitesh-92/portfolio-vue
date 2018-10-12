@@ -17,6 +17,7 @@
         :selectContact="switchToContact"
         />
       <About id="app-about" v-if="appAbout" />
+      <Projects v-if="appProjects"/>
       <Contact id="app-contact" v-if="appContact" />
     </div>
     
@@ -28,13 +29,15 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import Projects from './components/Projects';
 
 export default {
   name: 'App',
   data () {
     return {
-      appHome: true,
+      appHome: false,
       appAbout: false,
+      appProjects: true,
       appContact: false
     }
   },
@@ -64,6 +67,7 @@ export default {
     Navbar,
     Home,
     About,
+    Projects,
     Contact
   }
   
