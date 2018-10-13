@@ -6,17 +6,23 @@
         <div id="home-text">
           <p>Hi there,</p>
           <p>I'm a web developer from Leicester</p>
-          <p>I enjoy focusing on making web sites and web apps using JavaScript</p>
+          <p>I enjoy making web sites and web apps using JavaScript</p>
           <p>I’m always looking for a challenge</p>
           <p>If there’s anything I could do for you or help you with </p>
           <p id="home-text-contact">Contact Me <span @click="selectContact()">Here</span> </p>
         </div>
 
         <div id="my-links">
-          <p>You can find me at:
+          <!-- <p>You can find me at:
             <span><a href="https://github.com/hitesh-92" target="_blank">Github</a></span>
             <span><a href="https://stackoverflow.com/users/8349248/hitesh" target="_blank">StackOverFlow</a></span>
-          </p>
+          </p> -->
+
+          <p>You can find me at:</p>
+          <ul>
+            <li><a href="#"><i class="fab fa-github"></i>  GitHub</a></li>
+            <li><a href="#"><i class="fab fa-stack-overflow"></i>  StackOverFlow</a></li>
+          </ul>
         </div>
 
       </div>
@@ -34,6 +40,17 @@
 </script>
 
 <style>
+
+  #my-links > ul {
+    /* text-align: center; */
+    list-style-type: none;
+    color: rgb(89, 135, 204);
+  }
+
+  #my-links > ul > li > a {
+    text-decoration: none;
+    color: rgb(89, 135, 204); 
+  }
 
   @media only screen and (min-width: 700px){
     
@@ -60,7 +77,7 @@
       padding: 10px 20px;
     }
 
-    #my-links > span{
+    #my-links > ul{
       text-shadow: 0.75px 0.75px 0.75px rgb(255, 255, 255);
     }
 
@@ -70,22 +87,7 @@
     text-align: center;
   }
 
-  #home-contact-btn{
-    border: 1px solid black;
-    text-align: center;
-  }
-
-  #home-contact-btn > a {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: rgb(57, 115, 161);
-    border-radius: 5px;
-    color: white;
-    padding: 0.75em;
-    text-decoration-line: none;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
-  }
-
-  #my-links > p > span > a{
+  #my-links > ul > a{
     padding-left: 5px;
     text-decoration-line: none;
     color: rgb(89, 135, 204)

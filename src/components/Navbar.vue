@@ -10,25 +10,25 @@
       <hr>
 
       <li @click="selectHome()">
-        <span :class="[{active: homeStatus}]">Home</span>
+        <span :class="[{active: homeStatus}]"><i class="fas fa-home"></i>  Home</span>
       </li>
 
       <hr>
 
       <li @click="selectAbout()">
-        <span :class="[{active: aboutStatus}]">About</span>
+        <span :class="[{active: aboutStatus}]"><i class="far fa-user-circle"></i>  About</span>
       </li>
 
       <hr>
 
       <li @click="selectProjects()">
-        <span :class="[{active: projectsStatus}]">Projects</span>
+        <span :class="[{active: projectsStatus}]"><i class="far fa-file-alt"></i>  Projects</span>
       </li>
 
       <hr>
 
       <li @click="selectContact()">
-        <span :class="[{active: contactStatus}]">Contact</span>
+        <span :class="[{active: contactStatus}]"><i class="far fa-envelope-open"></i>  Contact</span>
       </li>
 
       <hr>

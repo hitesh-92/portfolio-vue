@@ -37,9 +37,9 @@
     name: 'App',
     data () {
       return {
-        appHome: true,
+        appHome: false,
         appAbout: false,
-        appProjects: false,
+        appProjects: true,
         appContact: false
       }
     },

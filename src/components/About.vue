@@ -61,12 +61,14 @@
         #about-main{
             display: grid;
             grid-template-rows: 1fr;
+            background-color: white;
         }
 
         #main-left{
-            margin: 1em 2em;
+            /* margin: 1em 2em; */
             color: rgb(134, 143, 141);
             text-align: center;
+            box-shadow: 0px 0px 5px 0px rgb(165, 165, 165);
         }
 
         #main-left > ul{
@@ -81,8 +83,8 @@
             /* margin: 3em 2em; */
             padding: 2em 3em;
             grid-row: 1/2;
-            background-color: white; 
-            box-shadow: 0px 1px 15px 0px rgb(165, 165, 165);
+            /* background-color: white;  */
+            box-shadow: 0px 0px 5px 0px rgb(165, 165, 165);
         }
 
         #about-title{
@@ -102,6 +104,7 @@
             grid-template-rows: 75px 1fr;
             margin:0;
             padding:0 20px;
+            background-color: white;
         }
 
         #main-left{
