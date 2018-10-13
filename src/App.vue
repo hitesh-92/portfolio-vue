@@ -4,9 +4,11 @@
       id="app-nav"
       :selectHome="switchToHome"
       :selectAbout="switchToAbout"
+      :selectProjects="switchToProjects"
       :selectContact="switchToContact"
       :homeStatus="appHome"
       :aboutStatus="appAbout"
+      :projectsStatus="appProjects"
       :contactStatus="appContact"
     />
 
@@ -16,63 +18,66 @@
         v-if="appHome"
         :selectContact="switchToContact"
         />
-      <About id="app-about" v-if="appAbout" />
-      <Projects v-if="appProjects"/>
-      <Contact id="app-contact" v-if="appContact" />
+      <About id="app-about" v-show="appAbout" />
+      <Projects id="app-projects"  v-show="appProjects"/>
+      <Contact id="app-contact" v-show="appContact" />
     </div>
     
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import Projects from './components/Projects';
+  import Navbar from './components/Navbar';
+  import Home from './components/Home';
+  import About from './components/About';
+  import Contact from './components/Contact';
+  import Projects from './components/Projects';
 
-export default {
-  name: 'App',
-  data () {
-    return {
-      appHome: false,
-      appAbout: false,
-      appProjects: true,
-      appContact: false
+  export default {
+    name: 'App',
+    data () {
+      return {
+        appHome: true,
+        appAbout: false,
+        appProjects: false,
+        appContact: false
+      }
+    },
+    props: {
+      overlay: Function
+    },
+    methods: {
+      switchToHome(){
+        this.hideAll();
+        this.appHome = true;
+      },
+      switchToAbout(){
+        this.hideAll();
+        this.appAbout = true;
+      },
+      switchToProjects(){
+        this.hideAll();
+        this.appProjects = true;
+      },
+      switchToContact(){
+        this.hideAll();
+        this.appContact = true;
+      },
+      hideAll(){
+        this.appHome = false;
+        this.appAbout = false;
+        this.appProjects = false;
+        this.appContact = false;
+      }
+    },
+    components: {
+      Navbar,
+      Home,
+      About,
+      Projects,
+      Contact
     }
-  },
-  props: {
-    overlay: Function
-  },
-  methods: {
-    switchToHome(){
-      this.hideAll();
-      this.appHome = true;
-    },
-    switchToAbout(){
-      this.hideAll();
-      this.appAbout = true;
-    },
-    switchToContact(){
-      this.hideAll();
-      this.appContact = true;
-    },
-    hideAll(){
-      this.appHome = false;
-      this.appAbout = false;
-      this.appContact = false;
-    }
-  },
-  components: {
-    Navbar,
-    Home,
-    About,
-    Projects,
-    Contact
   }
-  
-  
-}
 </script>
 
 <style>
@@ -81,6 +86,7 @@ export default {
     padding: 0;
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
+    overflow-y:scroll;
   }
   
   #app-body{

@@ -21,6 +21,12 @@
 
       <hr>
 
+      <li @click="selectProjects()">
+        <span :class="[{active: projectsStatus}]">Projects</span>
+      </li>
+
+      <hr>
+
       <li @click="selectContact()">
         <span :class="[{active: contactStatus}]">Contact</span>
       </li>
@@ -74,9 +80,11 @@ export default {
   props: {
     selectHome: Function,
     selectAbout: Function,
+    selectProjects: Function,
     selectContact: Function,
     homeStatus: Boolean,
     aboutStatus: Boolean,
+    projectsStatus: Boolean,
     contactStatus: Boolean
   },
   methods: {
@@ -139,12 +147,12 @@ export default {
 
     .active{
       box-sizing: border-box;
-      transition: 1s ease-in-out;
+      transition: 0.5s ease-in-out;
       transition-timing-function: ease-in;
-      color:rgb(0, 162, 255);
-      border-right: 1.5px solid rgb(124, 188, 207);
+      color:rgb(00, 162, 205);
       padding: 0.05em 0.4em;
       border-radius: 5px;
+      font-size: 1.05em;
     }
 
     hr { 
@@ -214,8 +222,8 @@ export default {
       }
 
       .active{
-        color: rgb(84, 166, 172) !important;
-        display: block !important;
+        /* border: 1px solid red; */
+        color: rgb(84, 166, 172);
       }
 
       .fa-bars{
