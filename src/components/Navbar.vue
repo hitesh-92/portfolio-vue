@@ -59,6 +59,10 @@
           <span :class="[{active: aboutStatus}]">About</span>
         </li>
 
+        <li @click="[selectProjects(), closeOverlay()]">
+          <span :class="[{active: projectsStatus}]">Projects</span>
+        </li>
+
         <li @click="[selectContact(), closeOverlay()]">
           <span :class="[{active: contactStatus}]">Contact</span>
         </li>
