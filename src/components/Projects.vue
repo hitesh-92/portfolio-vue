@@ -21,7 +21,7 @@
         </div>
 
         <div class="project" v-bind:class="{ project_active: project3 }" @mouseover="project3 = !project3" @mouseout="project3 = !project3">
-            <a href="#">Ikalon Consulting</a>
+            <a href="#">Project Title</a>
             <hr>
             <p v-if="project3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, vel!</p>
             <p v-else>Personal Project</p>
@@ -91,14 +91,13 @@
     }
 
     .project > small{
-        /* text-align: center; */
         margin-left: 2em;
     }
 
     .project > hr{
         border: 0; 
         height: 1px; 
-        background: rgba(0,89,255, 0.13)
+        background: rgba(0,89,255, 0.13);
     }
     
 </style>
