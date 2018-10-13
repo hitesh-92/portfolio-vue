@@ -60,69 +60,147 @@
 
 <style scoped>
 
-    #about{
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    .about-container{
-        height: 100%;
-        margin: 0 4em;
-        padding: 0;
-        color: rgb(129, 129, 129);
-        background-color: white;
-    }
-
-    .about-content{
-        background: white;
-        box-shadow: 1px 1px 5px 1px rgba(196, 196, 196, 0.603);
-    }
-
-    .about-context{
-        padding: 0em 4em;
-    }
-
-    .about-skills{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .skills-list{
-        text-align: center;
-    }
-
-    .skills-list > ul{
-        list-style-type: none;
-    }
-
-    .skills-list > ul > hr{
-        border: 0; 
-        height: 1px;
-        width: 15vw;
-        background: rgba(0,89,255, 0.13);
-    }
-
-    .skills-list > ul > li{
-        padding: 0.2em 0;
-    }
-
-    .skill-list-title{
-        font-size: 1.1em;
-        padding: 0;
-        margin: 0;
-    }
-
-    .skills-title{
-        text-align: center;
-        font-size: 1.1em;
-        padding: 1em 0;
-    }
-
     @media only screen and (min-width: 700px){
+
+        .about-container{
+            padding: 0 4em;
+            color: rgb(129, 129, 129);
+        }
+
+        .about-content{
+            padding-top: 4em;
+            padding-bottom: 0.5em;
+            background: white;
+            box-shadow: 1px 1px 5px 1px rgba(196, 196, 196, 0.603);
+        }
+
+        .about-context{
+            padding: 0em 4em;
+        }
+
+        .about-context > hr{
+            border: 0; 
+            height: 1px;
+            width: 100%;
+            background: rgba(0,89,255, 0.3);
+            margin: 4em 0;
+        }
+
+        .about-skills{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-bottom: 2em;
+        }
+
+        .skills-list{
+            text-align: center;
+            padding-right: 2em;
+        }
+
+        .skills-list > ul{
+            list-style-type: none;
+        }
+
+        .skills-list > ul > hr{
+            border: 0; 
+            height: 1px;
+            width: 15vw;
+            background: rgba(0,89,255, 0.13);
+        }
+
+        .skills-list > ul > li{
+            padding: 0.2em 0;
+        }
+
+        .skill-list-title{
+            font-size: 1.1em;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills-title{
+            text-align: center;
+            font-size: 1.1em;
+            padding: 1em 0;
+        }
         
     }
 
     @media only screen and (max-width: 700px){
+
+        .about-container{
+            color: rgb(129, 129, 129);
+            margin: 0em 0.5em;
+        }
+
+        .about-content{
+            padding: 1em 1em;
+            background: white;
+            display: grid;
+            grid-template-rows: 100% 100% 100%;
+        }
+
+        .about-content > hr{
+            margin: 10em 0;
+            display: none;
+        }
+
+        .about-context{
+            margin-top: 2em;
+            padding: 1em 0;
+            font-size: 0.8em;
+            grid-row: 3/4;
+        }
+
+        .about-context > p{
+            padding: 0.5em 0;
+        }
+
+        .about-skills{
+            grid-row: 2/3;
+        }
+
+        .about-context > hr{
+            display: none;
+        }
+
+        .skills-list-title{
+            text-align: center;
+            margin: 0;
+            padding: 0;
+
+            padding-top: 5em;
+        }
+
+        .skills-title{
+            grid-row: 1/2;
+            padding-top: 1em;
+            text-align: center;
+        }
+
+        .skills-list{
+            margin:0;
+            text-align: center;
+            font-size: 0.8em;
+            padding-right: 20%;
+            margin-top: 2.5em;
+        }
+
+        .skills-list > ul{
+            list-style-type: none;
+        }
+
+        .skills-list > ul > hr{
+            border: 0; 
+            height: 1px;
+            width: 40vw;
+            background: rgba(0,89,255, 0.13);
+            
+        }
+
+        .skills-list > ul > li{
+            padding: 0.2em 0;
+        }
 
     }
 

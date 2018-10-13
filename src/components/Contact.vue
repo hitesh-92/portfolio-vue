@@ -16,7 +16,7 @@
                 >
 
                 <div class="form-top" id="form-name">
-                    <label for="name" id="form-name-label">Name</label>
+                    <label for="name" id="form-name-label"><i class="far fa-address-card"></i> Name</label>
                     <input  
                         type="text" 
                         name="userName" 
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="form-top" id="form-email">
-                    <label  for="email" id="form-email-label">Email</label>
+                    <label  for="email" id="form-email-label"><i class="fas fa-at"></i>  Email</label>
                     <input 
                         type="email" 
                         name="userID" 
@@ -36,7 +36,7 @@
                         required
                     >
                 </div>
-
+                
                 <textarea 
                     name="userMessage" 
                     id="form-message" 

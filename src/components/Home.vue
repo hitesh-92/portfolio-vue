@@ -9,7 +9,7 @@
           <p>I enjoy making web sites and web apps using JavaScript</p>
           <p>I’m always looking for a challenge</p>
           <p>If there’s anything I could do for you or help you with </p>
-          <p id="home-text-contact">Contact Me <span @click="selectContact()">Here</span> </p>
+          <p id="home-text-contact">Contact Me <span @click="selectContact">Here</span> </p>
         </div>
 
         <div id="my-links">
@@ -47,9 +47,14 @@
     color: rgb(89, 135, 204);
   }
 
+  #my-links > ul > li{
+    padding: 0.2em 0;
+  }
+
   #my-links > ul > li > a {
     text-decoration: none;
-    color: rgb(89, 135, 204); 
+    color: rgb(89, 135, 204);
+    padding-right: 2em
   }
 
   @media only screen and (min-width: 700px){
@@ -113,7 +118,7 @@
 
     #home-text{
       grid-row:1/2;
-      padding-top: 2em;
+      padding-top: 1em;
       margin: 2em 1em;
     }
 
@@ -123,7 +128,7 @@
 
     #my-links{
       text-align: center;
-      padding: 2em;
+      padding: 1em 0;
     }
   }
 </style>

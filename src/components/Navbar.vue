@@ -41,7 +41,7 @@
     <!-- Mobile -->
     <div class="nav-small">
 
-      <p id="nav-small-name">Hitesh Gohil</p>
+      <p id="nav-small-name" :class="[{navSmallNameColor: navOverlay}]" >Hitesh Gohil</p>
 
       <div id="nav-small-sign" @click="navOverlay = !navOverlay">
         <i v-show="!navOverlay" class="fas fa-bars"></i>
@@ -110,63 +110,64 @@ export default {
 
 <style scoped>
 
-  @media only screen and (min-width: 700px){
-    ul{
-      padding: 0 !important;
-      margin-top: 35%;
+    @media only screen and (min-width: 700px){
+      ul{
+        padding: 0 !important;
+        margin-top: 35%;
+      }
+
+      li{
+        list-style-type: none;
+        font-family: sans-serif;
+        font-size: 1.15em;
+        margin: 1em 0em;
+      }
+
+      li> span:hover{
+        cursor: pointer;
+      }
+
+      li:hover > span{
+        transition: 0.2s ease-in;
+        color: rgb(0, 195, 255);
+      }
+
+      span{
+        color: rgb(104, 152, 224);
+      }
+
+      #name{
+        font-size: 1.2em;
+        text-shadow: 0.5px 0.5px 1px rgb(93, 115, 121);
+        color: rgb(100, 100, 100);
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        padding-bottom: 3em;
+      }
+
+      .active{
+        box-sizing: border-box;
+        transition: 0.5s ease-in-out;
+        transition-timing-function: ease-in;
+        color:rgb(00, 162, 205);
+        padding: 0.05em 0.4em;
+        border-radius: 5px;
+        font-size: 1.05em;
+      }
+
+      hr { 
+        border: 0; 
+        height: 1px; 
+        background: rgba(0,89,255, 0.13)
+      }
+
+      .nav-small, .nav-small-menu{
+        display: none;
+      }
+
+
     }
 
-    li{
-      list-style-type: none;
-      font-family: sans-serif;
-      font-size: 1.15em;
-      margin: 1em 0em;
-    }
-
-    li> span:hover{
-      cursor: pointer;
-    }
-
-    li:hover > span{
-      transition: 0.2s ease-in;
-      color: rgb(0, 195, 255);
-    }
-
-    span{
-      color: rgb(104, 152, 224);
-    }
-
-    #name{
-      font-size: 1.2em;
-      text-shadow: 0.5px 0.5px 1px rgb(93, 115, 121);
-      color: rgb(100, 100, 100);
-      font-family: 'Ubuntu', sans-serif;
-      font-weight: 500;
-      padding-bottom: 3em;
-    }
-
-    .active{
-      box-sizing: border-box;
-      transition: 0.5s ease-in-out;
-      transition-timing-function: ease-in;
-      color:rgb(00, 162, 205);
-      padding: 0.05em 0.4em;
-      border-radius: 5px;
-      font-size: 1.05em;
-    }
-
-    hr { 
-      border: 0; 
-      height: 1px; 
-      background: rgba(0,89,255, 0.13)
-    }
-
-    .nav-small, .nav-small-menu{
-      display: none;
-    }
-
-
-  }
 
     @media only screen and (max-width: 700px){
       
@@ -185,24 +186,24 @@ export default {
         float: left;
       }
 
+      .navSmallNameColor{
+        color: rgb(0, 108, 209) !important;
+      }
+
       #nav-small-sign{
         float: right;
       }
 
-      /* nav menu items */
-
       .nav-small-menu{
         z-index: 99;
         text-align: center;
-        transition: all 10.3s;
         box-shadow: 10px 15px 50px 20px rgb(55, 61, 66);
-        /* transition: opacity 1s; */
 
         position:fixed;
         position: absolute;
         height: 100%;
         width:100%;
-        background:rgba(80, 80, 80, 0.9);
+        background:rgba(80, 80, 80, 0.95);
         overflow:auto;
         z-index:99;
       }
@@ -215,13 +216,14 @@ export default {
       }
 
       .nav-small-list > li{
-        padding: 1em 0em;
-        margin: 1em 0;
+        padding: 1.25em 0em;
+        margin: 1.5em 0;
         margin-right: 6em;
         margin-left: 4em;
         background-color: rgb(75, 75, 75);
         border-radius: 10px;
         font-weight: lighter;
+        font-size: 0.65em;
       }
 
       .active{
@@ -240,4 +242,7 @@ export default {
       }
 
     }
+
+  
+
 </style>

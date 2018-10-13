@@ -13,10 +13,10 @@
     />
 
     <div id="app-body">
-      <Home id="app-home" v-show="appHome"/>
-      <About id="app-about" v-show="appAbout" />
-      <Projects id="app-projects"  v-show="appProjects"/>
-      <Contact id="app-contact" v-show="appContact" />
+      <Home id="app-home" v-if="appHome" :selectContact="switchToContact"/>
+      <About id="app-about" v-if="appAbout"/>
+      <Projects id="app-projects"  v-if="appProjects"/>
+      <Contact id="app-contact" v-if="appContact" />
     </div>
     
   </div>
@@ -102,14 +102,17 @@
       width: 100%;
       height: 100vh;
       text-align: center;
-      box-sizing: border-box;
-      border-right: 2px solid rgba(0, 89, 255, 0.13);
     }
     
     #app-body{
       grid-area: "app-body";
+      border-left: 2px solid rgb(206, 223, 255);
     }
-    
+
+    .app-about{
+      margin-bottom: 10em;
+    }
+
   }
 
 
@@ -118,7 +121,6 @@
     body{
       margin: 0;
       padding: 0;
-      
     }
 
     #app{
