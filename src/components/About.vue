@@ -181,8 +181,8 @@
         .skills-list{
             margin:0;
             text-align: center;
-            font-size: 1em;
-            /* padding-right: 20%; */
+            font-size: 1.2em;
+            padding-right: 10%;
             margin-top: 2.5em;
         }
 
