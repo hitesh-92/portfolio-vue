@@ -168,12 +168,13 @@
             text-align: center;
             margin: 0;
             padding: 0;
-
+            color: rgb(116, 116, 116);
             padding-top: 5em;
         }
 
         .skills-title{
             grid-row: 1/2;
+            color: rgb(102, 102, 102);
             padding-top: 1em;
             text-align: center;
         }
@@ -182,8 +183,9 @@
             margin:0;
             text-align: center;
             font-size: 1.2em;
-            padding-right: 10%;
             margin-top: 2.5em;
+
+            padding-right: 15%;
         }
 
         .skills-list > ul{
