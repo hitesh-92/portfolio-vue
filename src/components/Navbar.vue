@@ -53,7 +53,7 @@
 
       <i class="fas fa-times" @click="navOverlay = !navOverlay"></i>      
 
-      <ul class="nav-small-list" :class="[{navOverlay: nav-op}]">
+      <ul class="nav-small-list">
         <li @click="[selectHome(), closeOverlay()]">
           <span :class="[{active: homeStatus}]"><i class="fas fa-home"></i>  Home</span>
         </li>
@@ -196,7 +196,7 @@ export default {
         text-align: center;
         transition: all 10.3s;
         box-shadow: 10px 15px 50px 20px rgb(55, 61, 66);
-        transition: opacity 1s;
+        /* transition: opacity 1s; */
 
         position:fixed;
         position: absolute;

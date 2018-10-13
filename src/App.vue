@@ -13,11 +13,7 @@
     />
 
     <div id="app-body">
-      <Home
-        id="app-home"
-        v-if="appHome"
-        :selectContact="switchToContact"
-        />
+      <Home id="app-home" v-show="appHome"/>
       <About id="app-about" v-show="appAbout" />
       <Projects id="app-projects"  v-show="appProjects"/>
       <Contact id="app-contact" v-show="appContact" />
@@ -113,6 +109,7 @@
     #app-body{
       grid-area: "app-body";
     }
+    
   }
 
 
@@ -139,10 +136,6 @@
       padding: 0;
       height: 100%;
       width: 100vw;
-    }
-
-    #app-about{
-      min-height: 100vh;
     }
 
   }

@@ -55,8 +55,9 @@
   @media only screen and (min-width: 700px){
     
     #home-container{
-      display: grid;
-      grid-template-rows: 10em 1fr;
+      padding: 5em 0;
+      /* display: grid; */
+      /* grid-template-rows: 10em 1fr; */
       text-shadow: 0.75px 0.75px 0.75px rgb(255, 255, 255);
       font-size: 1.2em
     }
@@ -72,7 +73,7 @@
     }
 
     #my-links{
-      grid-row: 3/4;
+      /* grid-row: 3/4; */
       text-align: center;
       padding: 10px 20px;
     }
