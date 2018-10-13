@@ -1,6 +1,8 @@
 <template>
   <div id="navbar">
 
+
+    <!-- Desktop -->
     <ul class="nav-list">
 
       <li id="nav-list-name">
@@ -34,40 +36,42 @@
       <hr>
       
     </ul>
+    <!-- /Desktop -->
 
+    <!-- Mobile -->
     <div class="nav-small">
 
       <p id="nav-small-name">Hitesh Gohil</p>
 
-      <div id="nav-small-sign" @click="toggleOverlay()">
-        <i class="fas fa-bars"></i>
+      <div id="nav-small-sign" @click="navOverlay = !navOverlay">
+        <i v-show="!navOverlay" class="fas fa-bars"></i>
       </div>
 
     </div>
 
-    <div class="nav-small-menu" :class="[{active: navOverlay}]">
+    <div class="nav-small-menu" v-show="navOverlay" >
 
-      <i class="fas fa-times" @click="toggleOverlay()" :overlay="closeOverlay"></i>      
+      <i class="fas fa-times" @click="navOverlay = !navOverlay"></i>      
 
-      <ul class="nav-small-list">
-
+      <ul class="nav-small-list" :class="[{navOverlay: nav-op}]">
         <li @click="[selectHome(), closeOverlay()]">
-          <span :class="[{active: homeStatus}]">Home</span>
+          <span :class="[{active: homeStatus}]"><i class="fas fa-home"></i>  Home</span>
         </li>
 
         <li @click="[selectAbout(), closeOverlay()]">
-          <span :class="[{active: aboutStatus}]">About</span>
+          <span :class="[{active: aboutStatus}]"><i class="far fa-user-circle"></i>  About</span>
         </li>
 
         <li @click="[selectProjects(), closeOverlay()]">
-          <span :class="[{active: projectsStatus}]">Projects</span>
+          <span :class="[{active: projectsStatus}]"><i class="far fa-file-alt"></i>  Projects</span>
         </li>
 
         <li @click="[selectContact(), closeOverlay()]">
-          <span :class="[{active: contactStatus}]">Contact</span>
+          <span :class="[{active: contactStatus}]"><i class="far fa-envelope-open"></i>  Contact</span>
         </li>
-
       </ul>
+      <!-- /Mobile -->
+
     </div>
 
   </div>
@@ -81,6 +85,7 @@ export default {
       navOverlay: false
     }
   },
+
   props: {
     selectHome: Function,
     selectAbout: Function,
@@ -91,24 +96,15 @@ export default {
     projectsStatus: Boolean,
     contactStatus: Boolean
   },
+
   methods: {
-    navMenu(){
-      var button = document.querySelector('.menu-icon');
-      button.addEventListener('click', function (){
-        button.classList.toggle('open');
-      });
-    },
-    toggleOverlay(){
-      this.navOverlay = !this.navOverlay;
-      console.log(`toggleOverlay: ${this.navOverlay}`);
-    },
+
     closeOverlay(){
       this.navOverlay = false;
     }
+
   }
-  /*
-  
-  */
+
 }
 </script>
 
@@ -173,10 +169,12 @@ export default {
   }
 
     @media only screen and (max-width: 700px){
-
-      /* .nav-small{
-
-      } */
+      
+      .navbar{
+        padding:0;
+        margin:0;
+        transition: all 1s ease-in-out;
+      }
 
       .nav-list{
         display: none;
@@ -194,14 +192,15 @@ export default {
       /* nav menu items */
 
       .nav-small-menu{
-        display: none;
         z-index: 99;
         text-align: center;
         transition: all 10.3s;
         box-shadow: 10px 15px 50px 20px rgb(55, 61, 66);
+        transition: opacity 1s;
 
         position:fixed;
-        height:100%;
+        position: absolute;
+        height: 100%;
         width:100%;
         background:rgba(80, 80, 80, 0.9);
         overflow:auto;
@@ -226,14 +225,12 @@ export default {
       }
 
       .active{
-        /* border: 1px solid red; */
         color: rgb(84, 166, 172);
       }
 
       .fa-bars{
         margin: 1em;
         color: rgb(0, 195, 255);
-        /* display: none; */
       }
 
       .fa-times{

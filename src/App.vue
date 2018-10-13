@@ -43,9 +43,6 @@
         appContact: false
       }
     },
-    props: {
-      overlay: Function
-    },
     methods: {
       switchToHome(){
         this.hideAll();
