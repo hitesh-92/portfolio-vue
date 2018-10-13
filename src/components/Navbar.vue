@@ -223,7 +223,7 @@ export default {
         background-color: rgb(75, 75, 75);
         border-radius: 10px;
         font-weight: lighter;
-        font-size: 0.65em;
+        font-size: 0.85em;
       }
 
       .active{
