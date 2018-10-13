@@ -6,9 +6,9 @@
                 <div class="about-context">
                     <p>Being self-taught I started learning as a hobby in 2016, despite being familiar with computers since a young age I struggled to grasp the 'easiest' programming language; Python</p>
                     <p>Soon after I was told about web development from a friend; after initially giving up on python I convinced myself to try again as I've always had a passion for technology</p>
-                    <p>Finding I picked up the foundations of web development much easier, moved onto JavaScript.  It was around this time I came to the understanding that there were many programming languages with each language made to serve a different purpose</p>
+                    <p>Finding I picked up the foundations of web development much easier, moved onto JavaScript. It was around this time I came to the understanding that there were many programming languages with each language made to serve a different purpose</p>
                     <p>Before I could start exploring new languages, I took time to understand the foundations of programming, learning about data types and how data could be manipulated</p>
-                    <p>Going on to create my own project with these new tools. I soon came across the need to learn how to make asynchronous requests, what APIs are and CRUD functionality. This also presented the opportunity to learn about databases</p>
+                    <p>Going on to create my own project with these new tools. I soon came to the need to learn how to make asynchronous requests, what APIs are and CRUD functionality. This also presented the opportunity to learn about databases</p>
                     <p>Also with my newly developed skills I revisitied Python and eventually went on to make a couple of small games which taught me the importance of keeping code clean and simple</p>
                     <hr>
                 </div>
@@ -148,7 +148,7 @@
         .about-context{
             margin-top: 2em;
             padding: 1em 0;
-            font-size: 0.8em;
+            font-size: 0.9em;
             grid-row: 3/4;
         }
 
@@ -181,8 +181,8 @@
         .skills-list{
             margin:0;
             text-align: center;
-            font-size: 0.8em;
-            padding-right: 20%;
+            font-size: 1em;
+            /* padding-right: 20%; */
             margin-top: 2.5em;
         }
 
