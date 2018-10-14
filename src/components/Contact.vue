@@ -58,6 +58,7 @@
             </form>
 
             <div id="contact-message-success" v-if="formSuccess">
+                <p>Your message has been recieved!</p>
                 <i>
                 <p>Thanks for getting in contact</p>
                 <p>I'll get get back to you as soon as possible!</p>
@@ -93,103 +94,120 @@
             }
         },
         methods: {
+
             formSubmit(){
 
-                let validName = false;
-                let validEmail = false;
-                let validMessage = false;
-
-                if(this.userData.name.length < 1){
-                    document.getElementById('form-name-label').style.color = 'red';
-                    const id = document.getElementById('form-name-input');
-                    id.placeholder = 'Please enter your name';
-                    id.style.borderBottomColor = 'red';
-                    id.focus();
-                } else {
-                    validName = true;
-                }
-
-                if(this.userData.email.length < 5){
-                    document.getElementById('form-email-label').style.color = 'red';
-                    const id = document.getElementById('form-email-input');
-                    id.placeholder = 'Please enter your email';
-                    id.style.borderBottomColor = 'red';
-
-                    if (validName){
-                        id.focus();
-                    }
-                    
-                } else if (this.userData.email.length >= 5) {
-                    //REGEX for email
-                    function validateEmail(email) {
-                        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                        return re.test(String(email).toLowerCase());
-                    }
-
-                    const check  = validateEmail(this.userData.email);
-
-                    if(check){
-                        validEmail = true;
-                    } else {
-                        // document.getElementById('form-email-label').style.color = 'red';
-                        // const id = document.getElementById('form-email-input');
-                        // id.placeholder = 'Please enter your email';
-                        // id.style.borderBottomColor = 'red';
-                    }
-
-
-
-                    //exec this if the regex passes
-                    // validEmail = true;
-                } 
-
-                if(this.userData.message.length < 5){
-                    const id = document.getElementById('form-message');
-                    id.placeholder = 'Looks like you forgot to add your message!';
-
-                    if(validEmail){
-                        id.focus();
-                    }
-                    
-                } else {
-                    validMessage = true;
-                }
+                let validName = this.checkName();
+                let validEmail = this.checkEmail();
+                let validMessage = this.checkMessage();
 
                 console.log(validName, validEmail, validMessage);
 
                 if (validName==true && validEmail==true && validMessage==true){
+                    this.isSubmitted = !this.isSubmitted;
+                    this.formProcessing = true;
+
                     let form = {};
                     form.name = this.userData.name;
                     form.email = this.userData.email;
                     form.message = this.userData.message;
 
-                    const formStr = JSON.stringify(form);
+                    let postForm = this.sendForm(form);
 
-                    const res = fetch('http://127.0.0.1:5000/' + formStr)
-                        .then((data) => {res.json()})
-                        .then((data) => {
-
-                            //Display contact-message-success if the email is correctly sent
-                            // this.formProcessing = !this.formProcessing;
-                            this.formSuccess = !this.formSuccess;
-
-                            console.log(data);
-                            
-                        }).catch((e) => {
-                            
-                            //Display contact-message-fail
-                            this.formProcessing = !this.formProcessing;
-                            this.formFail = true;
-                        });
-
-                    this.isSubmitted = true;
+                    console.log(`postForm = ${postForm}`);
+                    return;
                 }
 
+        }, //formSubmit
+
+
+        checkName(){
+            let validName = false;
+
+            if(this.userData.name.length < 1){
+                    document.getElementById('form-name-label').style.color = 'red';
+                    const id = document.getElementById('form-name-input');
+                    id.placeholder = 'Please enter your name';
+                    id.style.borderBottomColor = 'red';
+                    id.focus();
+            } else {
+                validName = true;
             }
 
-        }
-    }
+            return validName;
+        }, //checkname
 
+
+        checkEmail(){
+            let validEmail = false;
+            let validLengthStyled = false;
+            const id = document.getElementById('form-email-input');
+
+            if(this.userData.email.length < 5){
+                document.getElementById('form-email-label').style.color = 'red';
+                id.placeholder = 'Please enter your email';
+                id.style.borderBottomColor = 'red';
+
+                if (validName){
+                    id.focus();
+                    validLengthStyled = true;
+                }
+            } else if (this.userData.email.length >= 5) {
+
+                //REGEX for email
+                function validateEmail(email) {
+                    var res = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return res.test(String(email).toLowerCase());
+                }
+
+                const check = validateEmail(this.userData.email);
+
+                if(check){
+                    validEmail = true;
+                }
+            }
+
+            return validEmail;
+        }, //checkEmail
+
+
+        checkMessage(){
+            let validMessage = false;
+
+            if(this.userData.message.length == 0){
+                const id = document.getElementById('form-message');
+                id.placeholder = 'Looks like you forgot to add your message!';
+                id.focus();
+            } else {
+                validMessage = true;
+            }
+
+            return validMessage;
+        }, //checkMessage
+
+        sendForm(form){
+            const data = encodeURIComponent(JSON.stringify(form));
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://localhost:6000/', true);
+            // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if(this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                    this.formProcessing = false;
+                    formSuccess = true;
+                    return true;
+                } else {
+                    this.formProcessing = !this.formProcessing;
+                    this.formFail = true;
+                    return false;
+                }
+            }
+            xhr.send(data);
+        } //sendForm
+
+
+    }//methods
+}
 </script>
 
 <style scoped>
