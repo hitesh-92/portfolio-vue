@@ -90,7 +90,8 @@
                 isSubmitted: false,
                 formProcessing: false,
                 formSuccess: false,
-                formFail: false
+                formFail: false,
+                formError: false
             }
         },
         methods: {
@@ -98,13 +99,17 @@
             formSubmit(){
 
                 let validName = this.checkName();
-                let validEmail = this.checkEmail();
+                let validEmail = this.checkEmail(validName);
                 let validMessage = this.checkMessage();
 
-                console.log(validName, validEmail, validMessage);
+                // console.log(name, validEmail, validMessage);
+                console.log(`name:${validName}`);
+                console.log(`email:${validEmail}`);
+                console.log(`message:${validMessage}`);
 
                 if (validName==true && validEmail==true && validMessage==true){
-                    this.isSubmitted = !this.isSubmitted;
+                    console.log('all 3 true');
+                    this.isSubmitted = true;
                     this.formProcessing = true;
 
                     let form = {};
@@ -112,17 +117,33 @@
                     form.email = this.userData.email;
                     form.message = this.userData.message;
 
+                    console.log('form sending...');
+
                     let postForm = this.sendForm(form);
+
+                    this.formProcessing = !this.formProcessing;
+
+                    if(postForm){
+                        formSuccess = true;
+                    } else if (!postForm){
+                        this.formFail = true;
+                    } else {
+                        // postForm == undefined
+                    }
+
+                    console.log('form sending complete');
 
                     console.log(`postForm = ${postForm}`);
                     return;
                 }
 
+                console.log('formSubimt complete')
+
         }, //formSubmit
 
 
         checkName(){
-            let validName = false;
+            let validNameCheck = false;
 
             if(this.userData.name.length < 1){
                     document.getElementById('form-name-label').style.color = 'red';
@@ -131,14 +152,14 @@
                     id.style.borderBottomColor = 'red';
                     id.focus();
             } else {
-                validName = true;
+                validNameCheck = true;
             }
 
-            return validName;
+            return validNameCheck;
         }, //checkname
 
 
-        checkEmail(){
+        checkEmail(validName){
             let validEmail = false;
             let validLengthStyled = false;
             const id = document.getElementById('form-email-input');
@@ -192,13 +213,10 @@
             xhr.open('POST', 'http://localhost:6000/', true);
             // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function() {
+                
                 if(this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                    this.formProcessing = false;
-                    formSuccess = true;
                     return true;
                 } else {
-                    this.formProcessing = !this.formProcessing;
-                    this.formFail = true;
                     return false;
                 }
             }
@@ -211,7 +229,7 @@
 </script>
 
 <style scoped>
-
+/*
     @media only screen and (min-width: 700px){
 
         #contact-container{
@@ -451,4 +469,6 @@
         }
 
     }
+*/
 </style>
+

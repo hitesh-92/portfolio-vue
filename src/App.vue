@@ -33,10 +33,10 @@
     name: 'App',
     data () {
       return {
-        appHome: true,
+        appHome: false,
         appAbout: false,
         appProjects: false,
-        appContact: false
+        appContact: true
       }
     },
     methods: {
