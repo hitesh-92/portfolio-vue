@@ -12,7 +12,7 @@
       <hr>
 
       <li @click="selectHome()">
-        <span :class="[{active: homeStatus}]"><i class="fas fa-home"></i>  Home</span>
+        <span :class="[{active: homeStatus}]"><i class="fas fa-home"></i> Home</span>
       </li>
 
       <hr>
@@ -30,7 +30,7 @@
       <hr>
 
       <li @click="selectContact()">
-        <span :class="[{active: contactStatus}]"><i class="far fa-envelope-open"></i>  Contact</span>
+        <span :class="[{active: contactStatus}]"><i class="far fa-envelope-open"></i>   Contact</span>
       </li>
 
       <hr>

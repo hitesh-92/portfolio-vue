@@ -253,7 +253,7 @@
 </script>
 
 <style scoped>
-/*
+
     @media only screen and (min-width: 700px){
 
         #contact-container{
@@ -493,6 +493,6 @@
         }
 
     }
-*/
+
 </style>
 
