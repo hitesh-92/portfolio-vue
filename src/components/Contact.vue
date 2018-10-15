@@ -207,20 +207,31 @@
         }, //checkMessage
 
         sendForm(form){
-            const data = encodeURIComponent(JSON.stringify(form));
+            const url = 'https://portfolio-contact-api.herokuapp.com/contact/';
+            const msg = {message: {name:'hitesh', age: 25} };
 
-            let xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://localhost:6000/', true);
-            // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function() {
-                
-                if(this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                    return true;
-                } else {
-                    return false;
-                }
+            function postReq(link, data){
+
+                return fetch(link, {
+                    method:'POST',
+                    headers: {'Content-Type':'application/json'},
+                    body: JSON.stringify(data)
+                }).then((res) => {
+                    const data = res.json();
+                    return data;
+                });
             }
-            xhr.send(data);
+
+            postReq(url, msg).then((data) => {
+                const res = JSON.stringify(data);
+                // const id = document.getElementById('result');
+                // id.innerText =  res;
+                console.log(res);
+                return res;
+            }).catch((e) => {
+                conosole.log('error: ', e)
+                return e;
+            });
         } //sendForm
 
 
