@@ -121,7 +121,14 @@
 
                     let postForm = this.sendForm(form);
 
-                    this.formProcessing = !this.formProcessing;
+                    async function postForm(){
+                        const data = await this.sendForm(form);
+                        console.log('postForm complete');
+                        this.formProcessing = !this.formProcessing;
+                        console.log('formProcessed')
+                    }
+
+                    // this.formProcessing = !this.formProcessing;
 
                     // if(postForm){
                     //     formSuccess = true;
