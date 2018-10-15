@@ -208,14 +208,13 @@
 
         sendForm(form){
             const url = 'https://portfolio-contact-api.herokuapp.com/contact/';
-            const msg = {message: {name:'hitesh', age: 25} };
 
             function postReq(link, data){
 
                 return fetch(link, {
                     method:'POST',
                     headers: {'Content-Type':'application/json'},
-                    body: JSON.stringify(data)
+                    body: JSON.stringify({formData: form})
                 }).then((res) => {
                     const data = res.json();
                     return data;
