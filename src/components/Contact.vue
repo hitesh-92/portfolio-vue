@@ -119,14 +119,19 @@
 
                     console.log('form sending...');
 
-                    let postForm = this.sendForm(form);
+                    // let postForm = this.sendForm(form);
 
                     async function postForm(){
                         const data = await this.sendForm(form);
-                        console.log('postForm complete');
+                        console.log('postForm complete', data);
                         this.formProcessing = !this.formProcessing;
                         console.log('formProcessed')
+                        return data;
                     }
+
+                    const postRes = postForm();
+
+
 
                     // this.formProcessing = !this.formProcessing;
 
@@ -140,7 +145,7 @@
 
                     console.log('form sending complete');
 
-                    console.log(`postForm = ${postForm}`);
+                    console.log(`postRes = ${postRes}`);
                     return;
                 }
 
