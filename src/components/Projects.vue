@@ -65,10 +65,11 @@
     @media only screen and (min-width: 700px){
 
         .project_active{
-            /* font-size: 1.001em; */
             color: rgb(82, 82, 82) !important;
             box-shadow: 1px 1px 10px 1px rgba(196, 196, 196) !important;
-            
+            /* border: 2px solid rgba(196, 196, 196, 0.623) !important; */
+            border: 5px solid rgba(247, 247, 247, 0.75) !important;
+            /* font-size: 1.01em; */
         }
 
         .projects{
@@ -90,7 +91,6 @@
             margin: 1em 3em;
             padding: 1.5em 3em;
             box-shadow: 1px 1px 5px 1px rgba(196, 196, 196, 0.603);
-            /* box-shadow: 1px 1px 5px 1px rgba(196, 196, 196, 0.068); */
             border: 1px solid white;
             color: rgb(134, 143, 141);
 
