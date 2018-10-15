@@ -221,7 +221,7 @@
                 });
             }
 
-            postReq(url, msg).then((data) => {
+            postReq(url, form).then((data) => {
                 const res = JSON.stringify(data);
                 // const id = document.getElementById('result');
                 // id.innerText =  res;
