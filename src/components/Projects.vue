@@ -7,12 +7,11 @@
             <div>
                 <a href="http://www.gohilreport.com" target="_blank">GohilReport</a>
                 <hr>
-                <p>Personal Project</p>
-                <br><br>
+                <p class="project-subTitle">Personal Project</p>
                 <p>Website with links to new articles, inspired by www.drudgereport.com <br> Have started to build an api for this project to save data </p>
             </div>
             <div class="project-img">
-                <img src="../../build/gohilReport.jpg" alt="gohilReport" >
+                <img  alt="gohilReport" srcset="../../build/gohilReport.jpg" >
             </div>
         </div>
 
@@ -20,8 +19,7 @@
             <div>
                 <a href="#" target="_blank">GohilReport</a>
                 <hr>
-                <p>Personal Project</p>
-                <br><br>
+                <p class="project-subTitle">Personal Project</p>
                 <p>Website with links to new articles, inspired by <a href="http://drudgereport.com">drudgereport</a></p>
             </div>
             <div class="project-img">
@@ -33,8 +31,7 @@
             <div>
                 <a href="http://www.gohilreport.com" target="_blank">GohilReport</a>
                 <hr>
-                <p>Personal Project</p>
-                <br><br>
+                <p class="project-subTitle">Personal Project</p>
                 <p>Website with links to new articles, inspired by <a href="http://drudgereport.com">drudgereport</a></p>
             </div>
             <div class="project-img">
@@ -67,9 +64,7 @@
         .project_active{
             color: rgb(82, 82, 82) !important;
             box-shadow: 1px 1px 10px 1px rgba(196, 196, 196) !important;
-            /* border: 2px solid rgba(196, 196, 196, 0.623) !important; */
             border: 5px solid rgba(247, 247, 247, 0.75) !important;
-            /* font-size: 1.01em; */
         }
 
         .projects{
@@ -115,6 +110,10 @@
             background: rgba(0,89,255, 0.13);
         }
 
+        .project > .project-subTitle{
+            color: red !important;
+        }
+
         .project-img{
             display: block;
             padding: 1em;
@@ -131,12 +130,15 @@
     @media only screen and (max-width: 700px){
         .projects{
             padding: 1.5em 1em;
-            
         }
 
         .projects > h3 {
             text-align: center;
             padding-bottom: 1.5em;
+        }
+
+        .project-img{
+            display: none;
         }
 
         .project{
@@ -146,11 +148,13 @@
             border-radius: 2px;
             background-color: rgba(255, 255, 255, 0.95);
             color: rgb(134, 143, 141);
+            border-radius: 2px;
         }
 
-        .project > a{
+        .project > div > a{
             text-decoration: none;
             color: rgb(57, 115, 161);
+            margin: 1em 0;
         }
 
         .project-desc{

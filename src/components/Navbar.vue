@@ -67,7 +67,7 @@
         </li>
 
         <li @click="[selectContact(), closeOverlay()]">
-          <span :class="[{active: contactStatus}]"><i class="far fa-envelope-open"></i>Contact</span>
+          <span :class="[{active: contactStatus}]"><i class="far fa-envelope-open"></i>  Contact</span>
         </li>
       </ul>
       <!-- /Mobile -->
