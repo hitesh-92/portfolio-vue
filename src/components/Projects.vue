@@ -12,7 +12,7 @@
                 <p>Website with links to new articles, inspired by www.drudgereport.com <br> Have started to build an api for this project to save data </p>
             </div>
             <div class="project-img">
-                <img src="/dist/gohilReport" alt="gohilReport" srcset="">
+                <img src="../../build/gohilReport.jpg" alt="gohilReport" >
             </div>
         </div>
 
