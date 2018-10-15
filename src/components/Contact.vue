@@ -57,6 +57,8 @@
 
             </form>
 
+            <div v-if="formProcessing">Processing</div>
+
             <div id="contact-message-success" v-if="formSuccess">
                 <p>Your message has been recieved!</p>
                 <i>
@@ -221,9 +223,9 @@
         sendForm(form){
             const url = 'https://portfolio-contact-api.herokuapp.com/contact/';
 
-            function postReq(link, data){
+            async function postReq(link, data){
 
-                return fetch(link, {
+                return await fetch(link, {
                     method:'POST',
                     headers: {'Content-Type':'application/json'},
                     body: JSON.stringify({formData: form})
