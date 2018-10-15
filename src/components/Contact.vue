@@ -123,13 +123,13 @@
 
                     this.formProcessing = !this.formProcessing;
 
-                    if(postForm){
-                        formSuccess = true;
-                    } else if (!postForm){
-                        this.formFail = true;
-                    } else {
-                        // postForm == undefined
-                    }
+                    // if(postForm){
+                    //     formSuccess = true;
+                    // } else if (!postForm){
+                    //     this.formFail = true;
+                    // } else {
+                    //     // postForm == undefined
+                    // }
 
                     console.log('form sending complete');
 
