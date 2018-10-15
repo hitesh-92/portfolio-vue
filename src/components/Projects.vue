@@ -8,7 +8,7 @@
                 <a href="http://www.gohilreport.com" target="_blank">GohilReport</a>
                 <hr>
                 <p class="project-subTitle">Personal Project</p>
-                <p>Website with links to new articles, inspired by www.drudgereport.com <br> Have started to build an api for this project to save data </p>
+                <p>Website with links to new articles <br> Have started to build an api for this project to save data </p>
             </div>
             <div class="project-img">
                 <img  alt="gohilReport" srcset="../../build/gohilReport.jpg" >
@@ -17,10 +17,10 @@
 
         <div class="project" v-bind:class="{ project_active: project2 }" @mouseover="project2 = !project2" @mouseout="project2 = !project2">
             <div>
-                <a href="#" target="_blank">GohilReport</a>
+                <a href="#" target="_blank">Project Title</a>
                 <hr>
-                <p class="project-subTitle">Personal Project</p>
-                <p>Website with links to new articles, inspired by <a href="http://drudgereport.com">drudgereport</a></p>
+                <p class="project-subTitle">Lorem, ipsum dolor.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, tempore.</p>
             </div>
             <div class="project-img">
                 <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
@@ -29,10 +29,10 @@
 
         <div class="project" v-bind:class="{ project_active: project3 }" @mouseover="project3 = !project3" @mouseout="project3 = !project3">
             <div>
-                <a href="http://www.gohilreport.com" target="_blank">GohilReport</a>
+                <a href="#" target="_blank">Project Title</a>
                 <hr>
-                <p class="project-subTitle">Personal Project</p>
-                <p>Website with links to new articles, inspired by <a href="http://drudgereport.com">drudgereport</a></p>
+                <p class="project-subTitle">Lorem, ipsum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quod!</p>
             </div>
             <div class="project-img">
                 <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
