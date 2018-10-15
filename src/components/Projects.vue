@@ -1,11 +1,6 @@
 <template>
     <div class="projects" @load="project2 = true">
 
-        <!-- <div class="project" id="gohil">
-            <a href="http://www.gohilreport.com">GohilRepot</a>
-            <p class="p-text">A website displaying links to new articles</p>
-        </div> -->
-
         <div class="project" v-bind:class="{ project_active: project1 }" @mouseover="project1 = !project1" @mouseout="project1 = !project1">
             <a href="http://www.gohilreport.com" target="_blank">GohilReport</a> <small>Personal Project</small>
             <hr>
@@ -34,7 +29,6 @@
             <p v-else>Personal Project</p>
         </div>
        
-
     </div>
 </template>
 
