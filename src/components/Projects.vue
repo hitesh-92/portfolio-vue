@@ -1,8 +1,10 @@
 <template>
     <div class="projects" @load="project2 = true">
 
+        <h3>Projects</h3>
+
         <div class="project" v-bind:class="{ project_active: project1 }" @mouseover="project1 = !project1" @mouseout="project1 = !project1">
-            <a href="http://www.gohilreport.com" target="_blank">GohilReport</a> <small>Personal Project</small>
+            <a href="http://www.gohilreport.com" target="_blank">GohilReport</a>
             <hr>
             <p v-if="project1">Website with links to new articles, inspired by <a href="http://drudgereport.com">drudgereport</a></p>
             <p v-else>Personal Project</p>
@@ -55,43 +57,86 @@
 
 <style>
 
-    .project_active{
-        background-color: rgba(255, 255, 255, 0.596) !important;
-        font-size: 1.001em;
-        color: rgb(129, 129, 129) !important;
+    @media only screen and (min-width: 700px){
+
+        .project_active{
+            background-color: rgba(255, 255, 255, 0.596) !important;
+            font-size: 1.001em;
+            color: rgb(129, 129, 129) !important;
+        }
+
+        .projects{
+            display: grid;
+            grid-template-rows: minmax(100px, 1fr);
+            padding: 2em 1.5em;
+            
+        }
+
+        .projects > h3{
+            color: rgb(109, 109, 109);
+            font-size: 1.4em;
+            padding-top: 1.5em;
+            text-align: center;
+        }
+
+        .project{
+            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background-color: white;
+            margin: 1em 3em;
+            padding: 1.5em 3em;
+            box-shadow: 1px 1px 5px 1px rgba(196, 196, 196, 0.603);
+            border: 1px solid white;
+            color: rgb(134, 143, 141);
+        }
+
+        .project > a{
+            text-decoration: none;
+            color: rgb(57, 115, 161);
+            padding-top: 1em
+        }
+
+        .project > small{
+            margin-left: 2em;
+        }
+
+        .project > hr{
+            border: 0; 
+            height: 1px; 
+            background: rgba(0,89,255, 0.13);
+        }
     }
 
-    .projects{
-        display: grid;
-        grid-template-rows: minmax(100px, 1fr);
-        padding: 2em 1.5em;
+
+    @media only screen and (max-width: 700px){
+        .projects{
+            padding: 1.5em 1em;
+            
+        }
+
+        .projects > h3 {
+            text-align: center;
+            padding-bottom: 1.5em;
+        }
+
+        .project{
+            padding: 0.5em 0.5em 0.1em 0.5em;
+            margin: 1.5em 0;
+            box-shadow: 0 0 3px 0px rgb(161, 161, 161);
+            border-radius: 2px;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: rgb(134, 143, 141);
+        }
+
+        .project > a{
+            text-decoration: none;
+            color: rgb(57, 115, 161);
+        }
+
+        .project-desc{
+            display: none;
+        }
     }
 
-    .project{
-        transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        background-color: white;
-        margin: 1em 3em;
-        padding: 1.5em 3em;
-        box-shadow: 1px 1px 5px 1px rgba(196, 196, 196, 0.603);
-        border: 1px solid white;
-        color: rgb(134, 143, 141);
-    }
-
-    .project > a{
-        font-style: none;
-        text-decoration: none;
-        color: rgb(57, 115, 161);
-        padding-top: 1em
-    }
-
-    .project > small{
-        margin-left: 2em;
-    }
-
-    .project > hr{
-        border: 0; 
-        height: 1px; 
-        background: rgba(0,89,255, 0.13);
-    }
+    
     
 </style>
