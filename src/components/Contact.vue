@@ -220,7 +220,7 @@
             return validMessage;
         }, //checkMessage
 
-        sendForm(form){
+        async sendForm(form){
             const url = 'https://portfolio-contact-api.herokuapp.com/contact/';
 
             async function postReq(link, data){
