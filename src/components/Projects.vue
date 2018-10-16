@@ -29,10 +29,10 @@
 
         <div class="project" v-bind:class="{ project_active: project3 }" @mouseover="project3 = !project3" @mouseout="project3 = !project3">
             <div>
-                <a href="#" target="_blank">Project Title</a>
+                <a href="https://hg-js-tictactoe-game.herokuapp.com/" target="_blank">Tic Tac Toe</a>
                 <hr>
-                <p class="project-subTitle">Lorem, ipsum.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quod!</p>
+                <p class="project-subTitle">Mini game app</p>
+                <p>Made a game which works in browser</p>
             </div>
             <div class="project-img">
                 <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
