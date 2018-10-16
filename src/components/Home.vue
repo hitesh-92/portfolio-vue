@@ -13,11 +13,6 @@
         </div>
 
         <div id="my-links">
-          <!-- <p>You can find me at:
-            <span><a href="https://github.com/hitesh-92" target="_blank">Github</a></span>
-            <span><a href="https://stackoverflow.com/users/8349248/hitesh" target="_blank">StackOverFlow</a></span>
-          </p> -->
-
           <p>You can find me at:</p>
           <ul>
             <li><a href="#"><i class="fab fa-github"></i>  GitHub</a></li>
