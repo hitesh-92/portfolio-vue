@@ -32,7 +32,7 @@
                 <a href="https://hg-js-tictactoe-game.herokuapp.com/" target="_blank">Tic Tac Toe</a>
                 <hr>
                 <p class="project-subTitle">Mini game app</p>
-                <p>Made a game which works in browser</p>
+                <p>Made a game which works in browser using JavaScript and jQuery</p>
             </div>
             <div class="project-img">
                 <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
