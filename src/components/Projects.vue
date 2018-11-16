@@ -39,6 +39,18 @@
             </div>
         </div>
 
+        <div class="project" v-bind:class="{ project_active: project4 }" @mouseover="project4 = !project4" @mouseout="project4 = !project4">
+            <div>
+                <a href="https://hg-js-calc.herokuapp.com/" target="_blank">Calculator App</a>
+                <hr>
+                <p class="project-subTitle">Simple Calculator</p>
+                <p>Created using JavaScript, a functioning calculator capable of chained commands</p>
+            </div>
+            <div class="project-img">
+                <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
+            </div>
+        </div>
+
     </div>
 </template>
 
