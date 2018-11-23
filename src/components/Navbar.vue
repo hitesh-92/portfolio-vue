@@ -199,7 +199,7 @@ export default {
         text-align: center;
         box-shadow: 10px 15px 50px 20px rgb(55, 61, 66);
 
-        position:fixed;
+        position: fixed;
         position: absolute;
         height: 100%;
         width:100%;

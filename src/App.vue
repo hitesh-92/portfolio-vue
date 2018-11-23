@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <Navbar 
       id="app-nav"
       :selectHome="switchToHome"
@@ -33,8 +34,8 @@
     name: 'App',
     data () {
       return {
-        appHome: true,
-        appAbout: false,
+        appHome: false,
+        appAbout: true,
         appProjects: false,
         appContact: false
       }
@@ -79,11 +80,12 @@
     padding: 0;
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
-    overflow-y:scroll;
+    overflow-y: scroll;
   }
   
   #app-body{
     background: linear-gradient(to bottom right, rgb(254, 255, 255) , rgb(137, 212, 255));
+    height: 100%;
   }
 
 
@@ -125,7 +127,7 @@
 
     #app{
       display: grid;
-      grid-template-rows: 100% 1fr;
+      /* grid-template-rows: 100% 1fr; */ /* somehow works!? */
     }
 
     #app-body{
@@ -136,7 +138,7 @@
       grid-row: 1/2;
       margin: 0;
       padding: 0;
-      height: 100%;
+      /* height: 100vh; */ /* somehow works!? */
       width: 100vw;
     }
 

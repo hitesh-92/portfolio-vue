@@ -140,6 +140,7 @@
 
 
     @media only screen and (max-width: 700px){
+        
         .projects{
             padding: 1.5em 1em;
         }

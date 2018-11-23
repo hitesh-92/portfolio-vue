@@ -72,6 +72,7 @@
             padding-bottom: 0.5em;
             background: white;
             box-shadow: 1px 1px 5px 1px rgba(196, 196, 196, 0.603);
+            font-size: 1.01em
         }
 
         .about-context{
@@ -137,7 +138,8 @@
             padding: 1em 1em;
             background: white;
             display: grid;
-            grid-template-rows: 100% 100% 100%;
+            /* grid-template-rows: 100% 100% 100%; */   /* somehow works!? */
+            /* grid-template-rows: repeat(3, 1fr); */   /* somehow works!? */
         }
 
         .about-content > hr{
@@ -148,7 +150,7 @@
         .about-context{
             margin-top: 2em;
             padding: 1em 0;
-            font-size: 0.9em;
+            font-size: 1.01em;
             grid-row: 3/4;
         }
 
