@@ -5,10 +5,11 @@
 
         <div class="project" v-bind:class="{ project_active: project1 }" @mouseover="project1 = !project1" @mouseout="project1 = !project1">
             <div>
-                <a href="http://www.gohilreport.com" target="_blank">GohilReport</a>
+                <a class="project-title" href="http://www.gohilreport.com" target="_blank">GohilReport</a>
                 <hr>
                 <p class="project-subTitle">Personal Project</p>
-                <p>Website with links to new articles <br> Have started to build an api for this project to save data </p>
+                <p class="project-description">Website with links to new articles <br> Have started to build an api for this project to save data </p>
+                <a href="https://github.com/hitesh-92/archReport"><small>GitHub</small></a>
             </div>
             <div class="project-img">
                 <img  alt="gohilReport" srcset="../../build/gohilReport.jpg" >
@@ -17,10 +18,10 @@
 
         <div class="project" v-bind:class="{ project_active: project2 }" @mouseover="project2 = !project2" @mouseout="project2 = !project2">
             <div>
-                <a href="#" target="_blank">Project Title</a>
+                <a class="project-title" href="#" target="_blank">Project Title</a>
                 <hr>
                 <p class="project-subTitle">Lorem, ipsum dolor.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, tempore.</p>
+                <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, tempore.</p>
             </div>
             <div class="project-img">
                 <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
@@ -29,10 +30,10 @@
 
         <div class="project" v-bind:class="{ project_active: project3 }" @mouseover="project3 = !project3" @mouseout="project3 = !project3">
             <div>
-                <a href="https://hg-js-tictactoe-game.herokuapp.com/" target="_blank">Tic Tac Toe</a>
+                <a class="project-title" href="https://hg-js-tictactoe-game.herokuapp.com/" target="_blank">Tic Tac Toe</a>
                 <hr>
                 <p class="project-subTitle">Mini game app</p>
-                <p>Made a game which works in browser using JavaScript and jQuery</p>
+                <p class="project-description">Made a game which works in browser using JavaScript and jQuery</p>
             </div>
             <div class="project-img">
                 <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
@@ -41,10 +42,10 @@
 
         <div class="project" v-bind:class="{ project_active: project4 }" @mouseover="project4 = !project4" @mouseout="project4 = !project4">
             <div>
-                <a href="https://hg-js-calc.herokuapp.com/" target="_blank">Calculator App</a>
+                <a class="project-title" href="https://hg-js-calc.herokuapp.com/" target="_blank">Calculator App</a>
                 <hr>
                 <p class="project-subTitle">Simple Calculator</p>
-                <p>Created using JavaScript, a functioning calculator capable of chained commands</p>
+                <p class="project-description">Created using JavaScript, a functioning calculator capable of chained commands</p>
             </div>
             <div class="project-img">
                 <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
@@ -70,6 +71,20 @@
 </script>
 
 <style>
+
+    .project > div > hr{
+        border: 0; 
+        height: 1px; 
+        background: rgba(0,89,255, 0.13);
+    }
+
+    .project-title{
+        font-size: 1.1em;
+    }
+
+    .project-description{
+        font-size: 1.01em;
+    }
 
     @media only screen and (min-width: 700px){
 
@@ -173,6 +188,12 @@
         .project-desc{
             display: none;
         }
+
+        /* .project > div > hr{
+            border: 0; 
+            height: 1px; 
+            background: rgba(0,89,255, 0.13);
+        } */
 
     }
 
