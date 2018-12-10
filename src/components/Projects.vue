@@ -18,13 +18,13 @@
 
         <div class="project" v-bind:class="{ project_active: project2 }" @mouseover="project2 = !project2" @mouseout="project2 = !project2">
             <div>
-                <a class="project-title" href="http://ikalon.herokuapp.com" target="_blank">Project Title</a>
+                <a class="project-title" href="http://ikalon.herokuapp.com" target="_blank">Ikalon Consulting</a>
                 <hr>
-                <p class="project-subTitle">Ikalon Consulting</p>
-                <p class="project-description">Converting a pdf document into a website. ( currently under development )</p>
+                <p class="project-subTitle">PDF to website</p>
+                <p class="project-description">( currently under development )</p>
             </div>
             <div class="project-img">
-                <img alt="Tic Tac Toe" srcset="../../build/tictactoe.jpg">
+                <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
             </div>
         </div>
 
@@ -37,7 +37,7 @@
                 <a href="https://github.com/hitesh-92/js-ticTacToe"><small>View code</small></a>
             </div>
             <div class="project-img">
-                <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
+                <img alt="Tic Tac Toe" srcset="../../build/tictactoe.jpg">
             </div>
         </div>
 
@@ -46,7 +46,11 @@
                 <a class="project-title" href="https://hg-js-calc.herokuapp.com/" target="_blank">Calculator App</a>
                 <hr>
                 <p class="project-subTitle">Simple Calculator</p>
-                <p class="project-description">Created using JavaScript, a functioning calculator capable of chained commands</p>
+                <p class="project-description">
+                    Created using JavaScript <br> 
+                    A functioning calculator capable of chained commands <br>
+                    Made using CSS grid
+                </p>
                 <a href="https://github.com/hitesh-92/js-calculator"><small>View code</small></a>
             </div>
             <div class="project-img">
