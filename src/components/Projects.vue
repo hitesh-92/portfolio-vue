@@ -9,7 +9,7 @@
                 <hr>
                 <p class="project-subTitle">Personal Project</p>
                 <p class="project-description">Website with links to new articles <br> Have started to build an api for this project to save data </p>
-                <a href="https://github.com/hitesh-92/archReport"><small>GitHub</small></a>
+                <a href="https://github.com/hitesh-92/archReport"><small>View code</small></a>
             </div>
             <div class="project-img">
                 <img  alt="gohilReport" srcset="../../build/gohilReport.jpg" >
@@ -18,13 +18,13 @@
 
         <div class="project" v-bind:class="{ project_active: project2 }" @mouseover="project2 = !project2" @mouseout="project2 = !project2">
             <div>
-                <a class="project-title" href="#" target="_blank">Project Title</a>
+                <a class="project-title" href="http://ikalon.herokuapp.com" target="_blank">Project Title</a>
                 <hr>
-                <p class="project-subTitle">Lorem, ipsum dolor.</p>
-                <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, tempore.</p>
+                <p class="project-subTitle">Ikalon Consulting</p>
+                <p class="project-description">Converting a pdf document into a website. ( currently under development )</p>
             </div>
             <div class="project-img">
-                <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
+                <img alt="Tic Tac Toe" srcset="../../build/tictactoe.jpg">
             </div>
         </div>
 
@@ -33,7 +33,8 @@
                 <a class="project-title" href="https://hg-js-tictactoe-game.herokuapp.com/" target="_blank">Tic Tac Toe</a>
                 <hr>
                 <p class="project-subTitle">Mini game app</p>
-                <p class="project-description">Made a game which works in browser using JavaScript and jQuery</p>
+                <p class="project-description">Made a game which works in browser using JavaScript class and jQuery</p>
+                <a href="https://github.com/hitesh-92/js-ticTacToe"><small>View code</small></a>
             </div>
             <div class="project-img">
                 <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
@@ -46,9 +47,10 @@
                 <hr>
                 <p class="project-subTitle">Simple Calculator</p>
                 <p class="project-description">Created using JavaScript, a functioning calculator capable of chained commands</p>
+                <a href="https://github.com/hitesh-92/js-calculator"><small>View code</small></a>
             </div>
             <div class="project-img">
-                <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
+                <img alt="Calculator" srcset="../../build/calc.png">
             </div>
         </div>
 
