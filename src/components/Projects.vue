@@ -8,7 +8,11 @@
                 <a class="project-title" href="http://www.gohilreport.com" target="_blank">GohilReport</a>
                 <hr>
                 <p class="project-subTitle">Personal Project</p>
-                <p class="project-description">Website with links to new articles <br> Have started to build an api for this project to save data </p>
+                <p class="project-description">
+                    Website which keeps record of news article links <br>
+                    Made using Handlebars ( not utilised to its capabilites as of yet ) <br>
+                    Have started to build an api for this project using node.js <br>
+                </p>
                 <a href="https://github.com/hitesh-92/archReport"><small>View code</small></a>
             </div>
             <div class="project-img">
@@ -33,7 +37,10 @@
                 <a class="project-title" href="https://hg-js-tictactoe-game.herokuapp.com/" target="_blank">Tic Tac Toe</a>
                 <hr>
                 <p class="project-subTitle">Mini game app</p>
-                <p class="project-description">Made a game which works in browser using JavaScript class and jQuery</p>
+                <p class="project-description">
+                    A easy game which works in browser <br> 
+                    Made with JavaScript and jQuery
+                </p>
                 <a href="https://github.com/hitesh-92/js-ticTacToe"><small>View code</small></a>
             </div>
             <div class="project-img">
@@ -49,7 +56,7 @@
                 <p class="project-description">
                     Created using JavaScript <br> 
                     A functioning calculator capable of chained commands <br>
-                    Made using CSS grid
+                    Made using JavaScript and CSS grid
                 </p>
                 <a href="https://github.com/hitesh-92/js-calculator"><small>View code</small></a>
             </div>
