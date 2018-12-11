@@ -15,8 +15,8 @@
         <div id="my-links">
           <p>You can find me at:</p>
           <ul>
-            <li><a href="#"><i class="fab fa-github"></i>  GitHub</a></li>
-            <li><a href="#"><i class="fab fa-stack-overflow"></i>  StackOverFlow</a></li>
+            <li><a href="https://github.com/hitesh-92"><i class="fab fa-github"></i>  GitHub</a></li>
+            <li><a href="https://stackoverflow.com/users/8349248/hitesh"><i class="fab fa-stack-overflow"></i>  StackOverFlow</a></li>
           </ul>
         </div>
 
