@@ -24,6 +24,7 @@
             <div>
                 <a class="project-title" href="http://ikalon.herokuapp.com" target="_blank">Ikalon Consulting</a>
                 <hr>
+                <a  class="project-title" target="_blank" href="https://ikalon-consulting.herokuapp.com/">New Version (under dev)</a>
                 <p class="project-subTitle">PDF to website</p>
                 <p class="project-description">( currently under development )</p>
             </div>
