@@ -66,6 +66,23 @@
             </div>
         </div>
 
+        <div class="project" v-bind:class="{ project_active: project5 }" @mouseover="project5 = !project4" @mouseout="project5 = !project5">
+            <div>
+                <a class="project-title" href="https://hg-react-tv-series.herokuapp.com" target="_blank">TV Series Finder</a>
+                <hr>
+                <p class="project-subTitle">Info on tv series</p>
+                <p class="project-description">
+                    Made with react.js <br>
+                    Search and view information about tv series <br>
+                    Used <a href="https://www.tvmaze.com/api">TVMAZE</a> API
+                </p>
+                <a href="https://github.com/hitesh-92/react-tv_series"><small>View code</small></a>
+            </div>
+            <div class="project-img">
+                <img alt="TVSERIES" srcset="../../build/tv.jpg">
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -78,6 +95,7 @@
                 project2: false,
                 project3: false,
                 project4: false,
+                project5: false
             }
         }
         
