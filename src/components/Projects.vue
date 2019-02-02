@@ -22,11 +22,13 @@
 
         <div class="project" v-bind:class="{ project_active: project2 }" @mouseover="project2 = !project2" @mouseout="project2 = !project2">
             <div>
-                <a class="project-title" href="http://ikalon.herokuapp.com" target="_blank">Ikalon Consulting</a>
+                <a class="project-title" href="https://ikalon-consulting.herokuapp.com/" target="_blank">Ikalon Consulting</a>
                 <hr>
-                <a  class="project-title" target="_blank" href="https://ikalon-consulting.herokuapp.com/">New Version (under dev)</a>
                 <p class="project-subTitle">PDF to website</p>
-                <p class="project-description">( currently under development )</p>
+                <p class="project-description">
+                    Made with Vue, Vuetify, Express <br>
+                    ( currently under development )
+                </p>
             </div>
             <div class="project-img">
                 <img src="https://images.pexels.com/photos/533189/pexels-photo-533189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" srcset="">
